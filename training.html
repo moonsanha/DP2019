@@ -7,21 +7,46 @@
             h1{margin-left:0px;}
             h2{margin-left:40px;}
             h3{margin-left:80px;}
-            
+            h2{
+                color: black;
+            }
             h1{
                 color: red;
                 font-size: 20px;
                 margin-left: 500px;
+                text-align: center;
             }
+            /* embed*/
+            *{
+                font-weight: bold
+                /* '*' 는 '모두 다'라는 뜻, 전체선택자. css 초기화에 사용*/
+            }
+        li{
+            color: blue;
+            /*모든 태그li 태그들의 글자가 파란색으로 변경됨*/
+        }
+        /*class명은 여러 번 사용할 수 있기 때문에 여러가지 요소들을 한꺼번에 선택하여 스타일을 지정할때 사용*/
+        /*'.'을 적는 것은 '이건 태그가 아니라 클래스 선택자의 네임이에요' 라는 의미*/
+        .class_name{
+            color: green;
+        }
+        /*특정 id 값을 가지고 있는 유일한 요소에 접근하여 ㅅ타일을 지정할 때는 id 선택자 형식을 사용*/
+        /* id 선택자는 '.' 이 아닌 '#'을 붙여야 함*/
+        #id_name{
+            color: pink;
+        }
+
         </style>
+        <link rel="stylesheet" type="text/css" href="default.css"/>
+        <!-- external -->
+
     </head>
      <body>
-            <a href="index.html">index </a>
-
+            <a href="index.html">돌아가기 </a>
         <!-- h1~h6 순번x, 깊이(depth)o -->
         <h1>대한민국</h1>
         <p>아시아에서 가운데 있는</p>
-        <h2>서울</h2>
+        <h2 style="color: violet">서울</h2>
         <h3>영등포구</h3>
         <h3>마포구</h3>
         <h3>중랑구</h3>
@@ -48,9 +73,9 @@
 
 
         <ul>
+            <li class="class_name">물 100g</li>
+            <li id="id_name">소금 100g</li>
             <li>설탕 100g</li>
-            <li>소금 100g</li>
-            <li>물 100g</li>
         </ul>
          <!-- odered list 순차적 목록-->
          <ol>
@@ -90,7 +115,45 @@
                         <img src="./images/puppydog.jpg" width="100px" />
                         <img src="images/puppydog.jpg" height="100px"  />
 
-    
+                        <!-- table 도표 -->
+                        <!-- table, tr(한줄), td(한칸) -->
+                        <!-- colspan 열확장, rowspan 행확장 -->
+                        <style>
+                            table,tr,td{border:solid 1px black;}
+                        </style>
+                        <!-- summary, caption -->
+                        <table summary="요약 내용">
+                            <caption> [표1] 표 제목 </caption>
+                            <!-- thead, tbody, tfoot -->
+                            <thead>
+                        <tr>
+
+                            <th>제목1</th>
+                            <th>제목2</th>
+                            <th>제목3</th>
+                            <th>제목4</th>
+                            <th>제목5</th>
+                        
+                         </tr>
+                        </thead>
+                         <tr>
+                                <td colspan="2">1</td>
+                                <td rowspan="2">2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                             </tr>
+                        </table>
+                        <!-- div 공간분할, span 공간분할 -->
+                        <!-- 의미없이 쓰기 좋은 태그-->
+
+                        <div>블록형 </div>
+                        <span>인라인형 </span>
+
+
 
 
     </body>
