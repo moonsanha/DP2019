@@ -3,10 +3,10 @@
         <title>free_layout</title>
         <meta charset="utf-8">
         <style type="text/css">
-        
-            a { text-decoration:none }
-    
-            </style>
+
+         a { text-decoration:none }
+         
+        </style>
             
         <style>
             a { text-decoration: none; color: black; }
@@ -16,6 +16,7 @@
     a:hover, a:active { text-decoration: none; }
     .tistory
     /*이것저것 해보다가 믿줄 자꾸 그어져서 일단 다집어넣어본것*/
+
             header{
                 background-color: #606969;
                 color: white;
@@ -35,6 +36,14 @@
             header>h1{
                 float: right;
                 margin: 0px;
+
+                
+            }
+            header>h4{
+                font: bold 14px Verdana, Arial, Helvetica, sans-serif;
+	           color: #000;
+	           margin: 0px;
+	           padding: 0px 0px 0px 15px;
             }
             header>nav{
                 float: right;
@@ -42,12 +51,19 @@
             header>nav>ul{
                 margin: 9px;
             }
+            header>nav>ul>li{
+                float: right;
+                list-style: none; 
+                padding-left: 10px;
+                padding-right: 10px;
+                border-right-style: groove;
+            }
             #main_visual{
                 padding-top: 400px;
-                padding-bottom: 500px;
-                background-image:url("images/셜록1.jpg");
-                background-position: 30% 70%;
-                
+                padding-bottom: 100px;
+                background-image:url("images/sherlock.jfif");
+                background-position: 30% 50%;
+
                 background-size: cover;
                 
                 background-repeat: no-repeat;
@@ -113,43 +129,79 @@
             
                 #png_center{
                     position: relative;
-                    left: 60px;
+                    left: 100px;
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
+                    
                 }
-            
-                
+
+             #tabsJ {
+      float:left;
+      width:100%;      
+      font-size:100%;
+      line-height:normal;
+	  border-bottom:0px solid #24618E;      
+      top: 40px;
+      left: 300px;
+      }
+    #tabsJ ul {
+	margin:0;
+	padding:30px 10px 0 0px;
+	list-style:none;
+      }
+    #tabsJ li {
+      display:inline;
+      margin:20px;
+      padding:0;
+      }
+    #tabsJ a {
+      float:left;     
+      margin:0;
+      padding:0 0 0 5px;
+      text-decoration:none;
+      }
+    #tabsJ a span {
+      float:left;
+      display:block;
+      padding:5px 15px 4px 6px;
+      color:rgb(255, 255, 255);
+      }
+    
+    #tabsJ a span {float:none;}
+    
+    #tabsJ a:hover span {
+      color:rgb(244, 169, 247);
+      }
+    #tabsJ a:hover {
+      background-position:0% -42px;
+      }
+    #tabsJ a:hover span {
+      background-position:100% -42px;
+      }
+                /* 시도 */
             
 
         </style>
     </head>
     <body>
-        <a href="index.html">BACK</a>
-        <hr />
+<div id="tabsJ">
+  <ul>
+    <li><a href="free_layout door.html" title="Link 1"><span> BACK </span></a></li>
+    <li><a href="#" title="Link 2"><span> ABOUT US </span></a></li>
+    <li><a href="#" title="Link 3"><span> TUTORIALS </span></a></li>
+    <li><a href="#" title="Longer Link Text"><span> DEMOS </span></a></li>
+    <li><a href="#" title="Link 5"><span> SHERLOCK </span></a></li>
+    <li><a href="#" title="Link 6"><span> WATSON </span></a></li>
+	<li><a href="#" title="Link 7"><span> NEWS </span></a></li>
+  </ul>
+</div>
+        
+        
+        
         <div id="wrap">
         <header>
-        <h1>
-            <a href="#">THE SHERLOCK</a>           
-        </h1>
-        <nav>
-            <ul>
-                <li>
-                <a href="https://www.bbc.com/">ABOUT SHERLOCK</a>
-                </li>           
-                <li>
-                <a href="https://www.bbc.com/news"> ABOUT JONE WATSON</a>                              
-                <li>
-                <a href="https://www.bbc.com/sport ">ABOUT DRAMA</a> 
-                </li>
-                <li>
-                <a href="https://www.bbc.com/future">ABOUT BBC</a> 
-                </li>
-                <div class="clear"></div>
-            </ul>
-        </nav>
-
-        <div class="clear"></div>
+        
         </header>
         <div id="main_visual">
             <div>The name is Sherlock Holmes and the address is 221b Baker street.</div>

@@ -1,290 +1,397 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr">
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  <title>CSS: Cascading Style Sheets | MDN</title>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Flat Color CSS Drop Menu</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index, follow">
+        <style>
+        body {
+	font-family: 'Orienta', sans-serif;
+	color: #252525;
+	position: relative;
+	padding:0;
+	margin: 0;
+}
 
-  
-<link rel="preload" href="/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2" as="font" type="font/woff2"
-    crossorigin />
-<link rel="preload" href="/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2" as="font" type="font/woff2"
-    crossorigin />
-
-  <link rel="home" href="/ko/">
-  <link rel="license" href="#license">
-
-  <link href="/static/build/styles/react-header.2a659f6ad280.css" rel="stylesheet" type="text/css" />
-<link href="/static/build/styles/react-mdn.f97014f61f1b.css" rel="stylesheet" type="text/css" />
-
-  <link href="/static/build/styles/prism.a6f275e5032b.css" rel="stylesheet" type="text/css" />
-
-  
-
-  
-<script>
-    // Mozilla DNT Helper
-    /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
-    // only load GA if DNT is not enabled
-    if (Mozilla && !Mozilla.dntEnabled()) {
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-36116321-5', 'mozilla.org');
-        ga('set', 'anonymizeIp', true);
-    }
-</script>
+.container {
+	width:960px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
 
 
-  <script>
-LUX=(function(){var a=("undefined"!==typeof(LUX)&&"undefined"!==typeof(LUX.gaMarks)?LUX.gaMarks:[]);var d=("undefined"!==typeof(LUX)&&"undefined"!==typeof(LUX.gaMeasures)?LUX.gaMeasures:[]);var j="LUX_start";var k=window.performance;var l=("undefined"!==typeof(LUX)&&LUX.ns?LUX.ns:(Date.now?Date.now():+(new Date())));if(k&&k.timing&&k.timing.navigationStart){l=k.timing.navigationStart}function f(){if(k&&k.now){return k.now()}var o=Date.now?Date.now():+(new Date());return o-l}function b(n){if(k){if(k.mark){return k.mark(n)}else{if(k.webkitMark){return k.webkitMark(n)}}}a.push({name:n,entryType:"mark",startTime:f(),duration:0});return}function m(p,t,n){if("undefined"===typeof(t)&&h(j)){t=j}if(k){if(k.measure){if(t){if(n){return k.measure(p,t,n)}else{return k.measure(p,t)}}else{return k.measure(p)}}else{if(k.webkitMeasure){return k.webkitMeasure(p,t,n)}}}var r=0,o=f();if(t){var s=h(t);if(s){r=s.startTime}else{if(k&&k.timing&&k.timing[t]){r=k.timing[t]-k.timing.navigationStart}else{return}}}if(n){var q=h(n);if(q){o=q.startTime}else{if(k&&k.timing&&k.timing[n]){o=k.timing[n]-k.timing.navigationStart}else{return}}}d.push({name:p,entryType:"measure",startTime:r,duration:(o-r)});return}function h(n){return c(n,g())}function c(p,o){for(i=o.length-1;i>=0;i--){var n=o[i];if(p===n.name){return n}}return undefined}function g(){if(k){if(k.getEntriesByType){return k.getEntriesByType("mark")}else{if(k.webkitGetEntriesByType){return k.webkitGetEntriesByType("mark")}}}return a}return{mark:b,measure:m,gaMarks:a,gaMeasures:d}})();LUX.ns=(Date.now?Date.now():+(new Date()));LUX.ac=[];LUX.cmd=function(a){LUX.ac.push(a)};LUX.init=function(){LUX.cmd(["init"])};LUX.send=function(){LUX.cmd(["send"])};LUX.addData=function(a,b){LUX.cmd(["addData",a,b])};LUX_ae=[];window.addEventListener("error",function(a){LUX_ae.push(a)});LUX_al=[];if("function"===typeof(PerformanceObserver)){var LongTaskObserver=new PerformanceObserver(function(c){var b=c.getEntries();for(var a=0;a<b.length;a++){var d=b[a];LUX_al.push(d)}});try{LongTaskObserver.observe({entryTypes:["longtask"],buffered:true})}catch(e){}};
-</script>
-<script src="https://cdn.speedcurve.com/js/lux.js?id=108906238" async defer crossorigin="anonymous"></script>
+label.mobile_menu span {
+	margin-left: 10px;
+	color: white;
+	display: none;
+}
+
+.nav {
+ 
+	font-family: 'Orienta', sans-serif; 
+	font-weight: 400; /* 400 thinner */
+	font-size: 13px;
+	line-height: 13px;
+
+ 
+	position: relative;
+	padding: 0 0 0 4px; /* Fix for inline-block spacing*/
+	margin: 0;
+
+ 
+    background-color: #1abc9c;
+}
 
 
-  <script>
-  window.fetch || document.write('<script src="/static/build/js/fetch-polyfill.63fdc379c7eb.js"><\/script>');
-</script>
-<script>
-  // Only include the fat polyfill for browsers that seem to not have
-  // certain JS features. E.g. Firefox 38.
-  Array.prototype.includes || document.write('<script src="/static/build/js/js-polyfill.6f2e22100487.js"><\/script>');
-</script>
+.nav a, .nav a:link, .nav a:visited, .nav a:hover, .nav a:focus, span {
+	color: #fff;
+	text-decoration: none;
+}
 
-  <script async type="text/javascript" src="/static/build/js/perf.654b849a6fd9.js" charset="utf-8"></script>
 
-  <!-- common social tags -->
-  
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
-  <meta property="og:site_name" content="MDN 웹 문서">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/ko/search/xml" title="MDN 웹 문서">
+.nav > li {
+	display: inline-block;
+	text-align: center;
+	margin-left: -4px; /* For the inline-block spacing */
+}
 
-  <!-- third-generation iPad with high-resolution Retina display: -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/favicon144.e7e21ca263ca.png">
-  <!-- iPhone with high-resolution Retina display: -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/favicon114.d526f38b09c5.png">
-  <!-- first- and second-generation iPad: -->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/favicon72.cc65d1d762a0.png">
-  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-  <link rel="apple-touch-icon-precomposed" href="/static/img/favicon57.de33179910ae.png">
-  <!-- basic favicon -->
-  <link rel="shortcut icon" href="/static/img/favicon32.7f3da72dcea1.png">
 
-  
 
-  <link rel="preconnect" href="https://interactive-examples.mdn.mozilla.net" pr="0.75" />
+.nav > li > a {
+	padding:20px 18px;
+	display: block;
+}
 
-  <link rel="canonical" href="https://developer.mozilla.org/ko/docs/Web/CSS" >
+.nav > li:hover > a{
+	color: #fff;
+}
 
-  
-  <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/CSS" title="CSS: Cascading Style Sheets">
-  
-    <link rel="alternate" hreflang="en" href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="CSS: Cascading Style Sheets">
-  
-    <link rel="alternate" hreflang="ar" href="https://developer.mozilla.org/ar/docs/Web/CSS" title="صفحات الأنماط الانسيابية">
-  
-    <link rel="alternate" hreflang="bg" href="https://developer.mozilla.org/bg/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="bn" href="https://developer.mozilla.org/bn/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="ca" href="https://developer.mozilla.org/ca/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="el" href="https://developer.mozilla.org/el/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="fa" href="https://developer.mozilla.org/fa/docs/Web/CSS" title="CSS: شیوه‌نامه‌های آبشاری">
-  
-    <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/CSS" title="CSS : Feuilles de style en cascade">
-  
-    <link rel="alternate" hreflang="he" href="https://developer.mozilla.org/he/docs/Web/CSS" title="CSS: גיליונות סגנון מדורגים">
-  
-    <link rel="alternate" hreflang="hu" href="https://developer.mozilla.org/hu/docs/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="id" href="https://developer.mozilla.org/id/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/CSS" title="CSS: カスケーディングスタイルシート">
-  
-    <link rel="alternate" hreflang="kab" href="https://developer.mozilla.org/kab/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="my" href="https://developer.mozilla.org/my/docs/Web/CSS" title="CSS: Cascading Style Sheets">
-  
-    <link rel="alternate" hreflang="nl" href="https://developer.mozilla.org/nl/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/CSS" title="CSS: Kaskadowe arkusze stylów">
-  
-    <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="pt" href="https://developer.mozilla.org/pt-PT/docs/Web/CSS" title="CSS: Folhas de Estilo em Cascata">
-  
-    <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="th" href="https://developer.mozilla.org/th/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="tr" href="https://developer.mozilla.org/tr/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="uk" href="https://developer.mozilla.org/uk/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="vi" href="https://developer.mozilla.org/vi/docs/Web/CSS" title="CSS">
-  
-    <link rel="alternate" hreflang="zh" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS" title="CSS（层叠样式表）">
-  
-    <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/CSS" title="CSS">
-  
+.nav > li:hover {
+	background-color: #16a085;
+}
 
-  <!-- document-specific social tags -->
-  <meta property="og:title" content="CSS: Cascading Style Sheets">
-  <meta property="og:url" content="https://developer.mozilla.org/ko/docs/Web/CSS">
-  <meta name="twitter:url" content="https://developer.mozilla.org/ko/docs/Web/CSS">
-  <meta name="twitter:title" content="CSS: Cascading Style Sheets">
-  
-  <meta property="og:description" content="Cascading Style Sheets(CSS)는 HTML이나 XML(SVG, XHTML 같은 XML 방언(dialect) 포함)로 작성된 문서의 표현을 기술하기 위해 쓰이는 스타일시트 언어입니다.">
-  <meta name="description" content="Cascading Style Sheets(CSS)는 HTML이나 XML(SVG, XHTML 같은 XML 방언(dialect) 포함)로 작성된 문서의 표현을 기술하기 위해 쓰이는 스타일시트 언어입니다.">
-  <meta name="twitter:description" content="Cascading Style Sheets(CSS)는 HTML이나 XML(SVG, XHTML 같은 XML 방언(dialect) 포함)로 작성된 문서의 표현을 기술하기 위해 쓰이는 스타일시트 언어입니다.">
-  
 
+
+.nav > li > ul {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	list-style: none;
+	top:53px;
+	background-color: #16a085;
+	width: 200px;
+	text-align: left;
+	margin-top:30px;
+	padding: 0px;
+	z-index: 99;
+}
+
+
+.nav > li:hover > ul {
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0px;
+}
+
+
+.nav li > ul li {
+	font-size: 11px;
+	position: relative;
+	display: block;
+	padding: 15px 10px;
+}
+
+.nav > li > ul  li:hover {
+	background-color: #006191;
+}
+
+.nav ul  li:hover > a {
+	color: white;
+}
+
+.nav > li > ul li ul li:hover {
+	background-color: #004b6f;
+}input#mobile_menu { display: none; }
+
+.nav > li > ul li ul li ul {
+	background-color: #004b6f;
+}
+
+.nav > li > ul li ul li ul li:hover {
+	background-color: #00344d;
+}
+
+
+
+.nav > li > .fulldrop {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	list-style: none;
+	top:53px;
+	left: 0px;
+	background-color: #16a085;
+	width: 100%;
+	min-height: 100px;
+	text-align: left;
+	margin-top:30px;
+	padding: 0;
+	z-index: 99;
+	overflow: hidden;
+}
+
+
+.nav > li:hover .fulldrop {
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0px;
+}
+
+.nav ul li:hover:after {
+	color: white;
+}
+
+.nav > li:hover .coldrop {
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0px;
+}
+
+.nav .coldrop .column {width: 130px;margin:0 9px;}
+
+
+
+.nav .column {
+	width: 14.1%;
+	float: left;
+	color:white;
+	margin: 0 0 0 2.2%;
+}
+
+.nav .column ul {
+	padding: 0;
+	margin: 0;
+}
+
+.nav .column ul li {
+	padding: 0;
+	list-style: none;
+	font-size: 11px;
+}
+
+.nav .column h3 {
+	font-size: 14px;
+	padding: 14px 0;
+	font-weight: 400;
+	margin: 5px 0 5px 0;
+}
+
+.nav .column ul li a {
+	display: block;
+	padding: 0 0 15px 0;
+}
+
+/* Arrows */
+.nav > li.dropdown > a:after {
+	 content: " \f107";
+	 font-family: FontAwesome;
+	 color: #fff;
+}
+
+.nav ul li.dropdown:after {
+
+  position: absolute;
+  left: 170px;
+  font-family: FontAwesome;
+  display: inline-block;
+  color: #fff;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+
+.nav > li.search {
+	border:none;
+	-webkit-box-shadow:  none;
+    box-shadow:  none;
+    float: right;
+    padding: 11px 6px;
+    position: relative;
+}
+
+.nav > li.search:hover {
+	background-color: transparent;
+}
+
+
+.nav > li  input {
+	padding: 7px 6px 6px 38px;
+	margin: 0 5px;
+	color:#fff;
+	border:none;
+	background-color: #16a085;
+	font-size: 14px;
+	border: 2px solid #16a085;
+}
+
+.nav > li  input:focus {
+	outline: none;
+	border-color: white;
+}
+
+.nav > li.search i {
+	position: absolute;
+	left: 20px;
+	top:20px;
+	color: #fff;
+	font-size: 17px;}
   
-    <link href="/static/build/styles/print.ca192a439743.css" rel="stylesheet" type="text/css" media="print" />
-  
-</head>
+        </style>
+        <link rel="stylesheet" href="/SRC2/megamenu1/navbar_techandall.css"> <!-- Navigation CSS -->
+        <link href="/SRC2/megamenu1/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    </head>
+
 <body>
-  <script>
-    // make sure global mdn object exists
-    var mdn = window.mdn || {};
-
-    (function(win) {
-        'use strict';
-
-        win.mdn.features = {};
-        win.mdn.siteUrl = 'https://developer.mozilla.org';
-        win.mdn.wikiSiteUrl = 'https://wiki.developer.mozilla.org';
-        win.mdn.staticPath = '/static/';
-        win.mdn.wiki = {
-            autosuggestTitleUrl: '/ko/docs/get-documents'
-        };
-
-        win.mdn.notifications = [];
-
-        
-
-        // interactive editor config
-        win.mdn.interactiveEditor = {
-            siteUrl: "https://developer.mozilla.org",
-            editorUrl: "https://interactive-examples.mdn.mozilla.net"
-        };
-        win.mdn.langCookieName = "django_language";
-
-    })(this);
-</script>
 
   
-
-  <div id="react-container" data-component-name="SPA"><div class="loading-bar loading-animation"></div><ul id="nav-access"><li><a id="skip-main" href="#content">Skip to main content</a></li><li><a id="skip-language" href="#language">Select language</a></li><li><a id="skip-search" href="#main-q">Skip to search</a></li></ul><header class="page-header"><a href="/ko/" class="logo" aria-label="MDN Web Docs"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 219 48" role="img"><path d="M49.752 30.824h59.917v17.132H49.75zm57.23 12.3c-.103.03-.21.048-.316.05-.338 0-.514-.15-.514-.582v-3.256c0-1.71-1.352-2.543-2.976-2.543a7.206 7.206 0 0 0-3.21.676l-.29 1.724 1.71.182.245-.842a2.338 2.338 0 0 1 1.147-.216c1.214 0 1.23.913 1.23 1.69v.234c-.407-.048-.818-.07-1.23-.068-1.71 0-3.49.433-3.49 2.276 0 1.563 1.23 2.144 2.31 2.144a2.7 2.7 0 0 0 2.41-1.494c.018.88.77 1.563 1.648 1.494a2.89 2.89 0 0 0 1.353-.338zm-4.604-.05a.787.787 0 0 1-.88-.867c0-.815.677-1.015 1.432-1.015.36.008.722.04 1.078.098-.05 1.235-.852 1.783-1.63 1.783zM97.388 33l-3.24 11.433h2.11L99.5 33.002zm-4.353 0l-3.24 11.433h2.11L95.145 33zm-6.89 6.645h2.243V36.94h-2.242zm0 4.802h2.243v-2.706h-2.242zm-3.617-1.64H80.1l4.156-4.736-.166-1.13h-6.58l-.268 2.63 1.546.164.338-1.163h2.343l-4.123 4.734.216 1.13h6.544l.467-2.63-1.69-.164zM72.143 36.79c-2.706 0-4.02 1.812-4.02 4.004 0 2.394 1.595 3.804 3.905 3.804 2.394 0 4.122-1.51 4.122-3.905-.003-2.093-1.32-3.906-4.01-3.906zm-.054 6.154c-1.165 0-1.763-.997-1.763-2.292 0-1.414.676-2.23 1.778-2.23 1.015 0 1.83.677 1.83 2.196 0 1.438-.73 2.327-1.846 2.327zm-5.906-3.564c0-1.78-1.224-2.594-2.577-2.594a2.51 2.51 0 0 0-2.44 1.612c-.367-1.1-1.364-1.613-2.443-1.613a2.48 2.48 0 0 0-2.276 1.278v-1.13h-3.14v1.63h.996v4.24h-.997v1.63h4.572v-1.63h-1.432V40.2c0-1.048.433-1.78 1.448-1.78.845 0 1.278.502 1.278 1.797v4.224h3.14v-1.63h-.996v-2.612c0-1.048.433-1.78 1.447-1.78.846 0 1.278.502 1.278 1.797v4.214h3.142V42.8h-.998zm78.791-22.39h-6.29c.23-1.935 1.16-3.558 3.274-3.558 2.245 0 3.2 1.857 3.016 3.558zM218.952 0v29.137h-169.2V0zM71.706 6.885h-3.85L61.51 20.01h-.104L54.882 6.884h-3.84v1.65h2.19V21.98H51.12v1.65h5.927v-1.65h-2.012V11.24h.1l5.75 11.553H61.9l5.62-11.474h.105v10.66h-1.962v1.65h5.942v-1.65h-2.09V8.536h2.19zm9.993 16.76c5.285 0 8.484-3.48 8.484-8.42 0-4.847-3.094-8.353-8.56-8.353H74.12v1.623h2.114v13.527H74.12v1.623zm27.05-16.76h-6.426v1.65h2.526v11.268h-.1L95.21 6.885H91.6v1.65h2.22V21.98h-1.935v1.65h6.385v-1.65h-2.655V10.444h.1l9.724 13.202h1.21V8.535h2.09zm26.71 5.29h-5.156v1.467h1.83l-1.857 7.247h-.128l-3.586-8.716h-1.21l-3.423 8.718h-.127l-2.14-7.247h1.933v-1.47h-5.41v1.467h1.522l3.25 10.003h1.352l3.432-8.766h.13l3.496 8.765h1.393l3.122-10.003h1.573zm6.704 11.727c2.837 0 4.514-1.583 4.83-3.568l-1.523-.338c-.36 1.42-1.365 2.347-3.17 2.347-2.283 0-3.53-1.468-3.636-4.02h8.058c.1-.445.153-.898.156-1.354-.024-2.71-1.728-5.03-4.873-5.03-3.246 0-5.26 2.58-5.26 6.14 0 3.712 2.162 5.825 5.412 5.825zm13.408 0c3.663 0 5.134-3.25 5.134-6.294 0-3.642-2.063-5.67-4.924-5.67-2.19 0-3.402 1.186-4.1 2.603V5.905h-3.53v1.47h1.692v12.923a22.8 22.8 0 0 1-.338 3.35h1.805a44.05 44.05 0 0 0 .235-1.906c.747 1.39 2.242 2.165 4.02 2.165zm26.198-1.728h-1.985V5.904h-4.6v1.47h2.798v6.653c-.748-1.342-2.15-2.09-3.842-2.09-3.74 0-5.183 3.2-5.183 6.267 0 3.584 1.958 5.698 4.924 5.698 2.087 0 3.352-1.224 4.1-2.577v2.323h3.784zm6.963 1.728c3.53 0 5.75-2.526 5.742-6.006 0-3.25-1.934-5.982-5.647-5.982s-5.67 2.735-5.67 6.087c0 3.457 2.09 5.905 5.568 5.905zm12.942 0c3.172 0 4.538-2.114 4.866-4.112l-1.548-.34c-.334 1.885-1.315 2.917-3.094 2.917-2.27 0-3.507-1.637-3.507-4.397 0-2.475.982-4.487 3.43-4.487a4.4 4.4 0 0 1 2.45.646l.42 1.936 1.496-.18-.44-2.758c-1.16-.876-2.397-1.187-3.92-1.187-3.556 0-5.362 2.966-5.362 6.14 0 3.685 2.036 5.825 5.208 5.825zm11.166 0c2.76 0 4.874-1.34 4.847-3.595 0-4.565-7.1-2.195-7.1-5.184 0-1.177 1.03-1.69 2.474-1.69.826-.015 1.64.18 2.368.567l.267 1.864 1.495-.18-.284-2.68a8.135 8.135 0 0 0-3.997-1.06c-2.088 0-4.255.903-4.255 3.328 0 4.46 7.193 2.063 7.193 5.208 0 1.315-1.495 1.934-3.095 1.934a5.812 5.812 0 0 1-2.553-.568l.078-1.522-1.444-.156-.362 2.604c.977.643 2.736 1.133 4.36 1.133zm-54.042-6.11c0 2.373-1.058 4.564-3.584 4.564a3.455 3.455 0 0 1-3.534-3.456v-1.728c.05-1.7 1.444-3.686 3.635-3.686 1.948 0 3.48 1.444 3.483 4.305zm19.18-1.06v1.833c-.076 1.73-1.57 3.79-3.634 3.79-1.985 0-3.48-1.47-3.48-4.28 0-2.425 1.133-4.59 3.686-4.59a3.36 3.36 0 0 1 3.43 3.248zm14.597 1.133c0 2.58-1.34 4.488-3.79 4.488-2.453 0-3.74-1.958-3.74-4.46 0-2.55 1.34-4.434 3.74-4.434 2.397 0 3.79 1.778 3.79 4.405zm-104.39-2.593c0 4.16-2.32 6.763-6.574 6.763h-3.478V8.508h3.466c4.254 0 6.574 2.71 6.587 6.764zM.116 0h47.956v47.956H.116zM42.01 22.02c-.036-.723-.12-1.448-.17-2.166a1.74 1.74 0 0 0-.395-.98 2.465 2.465 0 0 0-1.026-.74c-.808-.314-1.622-.664-2.435-.975a21.509 21.509 0 0 1-3.342-1.472 2.626 2.626 0 0 1-1.296-1.972 2.954 2.954 0 0 0-1.47-2.228 4.062 4.062 0 0 0-2.958-.35c-.734.176-1.5.165-2.23-.033l-1.112-.34-.302-.09-.873-.26c-1.57-.468-2.228-.713-4.773-.278a14.678 14.678 0 0 0-7.09 3.897l-6.37 6.76h5.72l-3.504 3.71h6.026l-3.503 3.71h4.844l-1.548 4.06c5.93 6.07 12.25 7.295 12.25 7.295 0-1.673.38-8.24.826-9.34a5.25 5.25 0 0 1 .762-1.54 4.211 4.211 0 0 1 3.393-1.547c1.303 0 2.597.238 3.815.702.74.31 1.577.264 2.277-.122a38.42 38.42 0 0 0 1.498-.94.839.839 0 0 1 .556-.18c.54.06 1.054-.237 1.27-.734.16-.33.35-.64.524-.97.472-.884.69-1.88.633-2.88z"></path></svg></a><nav class="main-nav" role="navigation"><ul><li class="top-level-entry-container"><button type="button" class="top-level-entry" aria-haspopup="true">Technologies<span class="main-menu-arrow" aria-hidden="true">▼</span></button><ul><li data-item="Technologies" role="menuitem"><a href="/ko/docs/Web">Technologies Overview</a></li><li data-item="Technologies" role="menuitem"><a href="/ko/docs/Web/HTML">HTML</a></li><li data-item="Technologies" role="menuitem"><a href="/ko/docs/Web/CSS">CSS</a></li><li data-item="Technologies" role="menuitem"><a href="/ko/docs/Web/JavaScript">JavaScript</a></li><li data-item="Technologies" role="menuitem"><a href="/ko/docs/Web/Guide/Graphics">Graphics</a></li><li data-item="Technologies" role="menuitem"><a href="/ko/docs/Web/HTTP">HTTP</a></li><li data-item="Technologies" role="menuitem"><a href="/ko/docs/Web/API">APIs / DOM</a></li><li data-item="Technologies" role="menuitem"><a href="/ko/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li><li data-item="Technologies" role="menuitem"><a href="/ko/docs/Web/MathML">MathML</a></li></ul></li><li class="top-level-entry-container"><button type="button" class="top-level-entry" aria-haspopup="true">References &amp; Guides<span class="main-menu-arrow" aria-hidden="true">▼</span></button><ul><li data-item="References &amp; Guides" role="menuitem"><a href="/ko/docs/Learn">Learn web development</a></li><li data-item="References &amp; Guides" role="menuitem"><a href="/ko/docs/Web/Tutorials">Tutorials</a></li><li data-item="References &amp; Guides" role="menuitem"><a href="/ko/docs/Web/Reference">References</a></li><li data-item="References &amp; Guides" role="menuitem"><a href="/ko/docs/Web/Guide">Developer Guides</a></li><li data-item="References &amp; Guides" role="menuitem"><a href="/ko/docs/Web/Accessibility">Accessibility</a></li><li data-item="References &amp; Guides" role="menuitem"><a href="/ko/docs/Games">Game development</a></li><li data-item="References &amp; Guides" role="menuitem"><a href="/ko/docs/Web">...more docs</a></li></ul></li><li class="top-level-entry-container"><button type="button" class="top-level-entry" aria-haspopup="true">Feedback<span class="main-menu-arrow" aria-hidden="true">▼</span></button><ul><li data-item="Feedback" role="menuitem"><a href="/ko/docs/MDN/Feedback">Send Feedback</a></li><li data-item="Feedback" role="menuitem"><a target="_blank" rel="noopener noreferrer" href="https://support.mozilla.org/">Get Firefox help<!-- --> 🌐</a></li><li data-item="Feedback" role="menuitem"><a target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/">Get web development help<!-- --> 🌐</a></li><li data-item="Feedback" role="menuitem"><a href="/ko/docs/MDN/Community">Join the MDN community</a></li><li data-item="Feedback" role="menuitem"><a target="_blank" rel="noopener noreferrer" href="https://github.com/mdn/sprints/issues/new?template=issue-template.md&amp;projects=mdn/sprints/2&amp;labels=user-report&amp;title=%2Fko%2Fdocs%2FWeb%2FCSS">Report a content problem<!-- --> 🌐</a></li><li data-item="Feedback" role="menuitem"><a target="_blank" rel="noopener noreferrer" href="https://github.com/mdn/kuma/issues/new">Report an issue<!-- --> 🌐</a></li></ul></li></ul></nav><form class="header-search" id="nav-main-search" action="/ko/search" method="get" role="search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 28" aria-hidden="true" class="search-icon"><path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path></svg><label for="main-q" class="visually-hidden">MDN 검색</label><input type="search" class="search-input-field" id="main-q" name="q" placeholder="MDN 검색" pattern="(.|\s)*\S(.|\s)*" required=""/></form></header><main role="main"><div class="titlebar-container"><div class="titlebar"><h1 class="title">CSS: Cascading Style Sheets</h1></div></div><div class="full-width-row-container"><div class="max-content-width-container"><nav class="breadcrumbs" role="navigation"><ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs"><li property="itemListElement" typeof="ListItem"><a href="/ko/docs/Web" class="breadcrumb-chevron" property="item" typeof="WebPage"><span property="name">개발자를 위한 웹 기술</span></a><meta property="position" content="1"/></li><li property="itemListElement" typeof="ListItem"><a href="/ko/docs/Web/CSS" class="crumb-current-page" property="item" typeof="WebPage"><span property="name" aria-current="page">CSS: Cascading Style Sheets</span></a><meta property="position" content="2"/></li></ol></nav><div class="dropdown-container"><button type="button" class="dropdown-menu-label" aria-haspopup="true" aria-owns="language-menu" aria-label="Current language is 한국어. Choose your preferred language.">한국어<span class="dropdown-arrow-down" aria-hidden="true">▼</span></button><ul id="language-menu" class="dropdown-menu-items" style="right:0" role="menu"><li lang="en-US" role="menuitem"><a href="/en-US/docs/Web/CSS" title="영어 (미국)"><bdi>English (US)</bdi></a></li><li lang="ar" role="menuitem"><a href="/ar/docs/Web/CSS" title="아랍어"><bdi>عربي</bdi></a></li><li lang="bg" role="menuitem"><a href="/bg/docs/Web/CSS" title="불가리아어"><bdi>Български</bdi></a></li><li lang="bn" role="menuitem"><a href="/bn/docs/Web/CSS" title="방글라데시어"><bdi>বাংলা</bdi></a></li><li lang="ca" role="menuitem"><a href="/ca/docs/Web/CSS" title="카탈로니아어"><bdi>Català</bdi></a></li><li lang="de" role="menuitem"><a href="/de/docs/Web/CSS" title="독일어"><bdi>Deutsch</bdi></a></li><li lang="el" role="menuitem"><a href="/el/docs/Web/CSS" title="그리스어"><bdi>Ελληνικά</bdi></a></li><li lang="es" role="menuitem"><a href="/es/docs/Web/CSS" title="스페인어"><bdi>Español</bdi></a></li><li lang="fa" role="menuitem"><a href="/fa/docs/Web/CSS" title="페르시아어"><bdi>فارسی</bdi></a></li><li lang="fr" role="menuitem"><a href="/fr/docs/Web/CSS" title="프랑스어"><bdi>Français</bdi></a></li><li lang="he" role="menuitem"><a href="/he/docs/Web/CSS" title="히브리어"><bdi>עברית</bdi></a></li><li lang="hu" role="menuitem"><a href="/hu/docs/CSS" title="헝가리어"><bdi>magyar</bdi></a></li><li lang="id" role="menuitem"><a href="/id/docs/Web/CSS" title="인도네시아어"><bdi>Bahasa Indonesia</bdi></a></li><li lang="it" role="menuitem"><a href="/it/docs/Web/CSS" title="이탈리아어"><bdi>Italiano</bdi></a></li><li lang="ja" role="menuitem"><a href="/ja/docs/Web/CSS" title="일본어"><bdi>日本語</bdi></a></li><li lang="kab" role="menuitem"><a href="/kab/docs/Web/CSS" title="카빌어"><bdi>Taqbaylit</bdi></a></li><li lang="my" role="menuitem"><a href="/my/docs/Web/CSS" title="버마어"><bdi>မြန်မာဘာသာ</bdi></a></li><li lang="nl" role="menuitem"><a href="/nl/docs/Web/CSS" title="네델란드어"><bdi>Nederlands</bdi></a></li><li lang="pl" role="menuitem"><a href="/pl/docs/Web/CSS" title="폴란드어"><bdi>Polski</bdi></a></li><li lang="pt-BR" role="menuitem"><a href="/pt-BR/docs/Web/CSS" title="포르투갈어 (브라질)"><bdi>Português (do Brasil)</bdi></a></li><li lang="pt-PT" role="menuitem"><a href="/pt-PT/docs/Web/CSS" title="포르투갈어 (포르투갈)"><bdi>Português (Europeu)</bdi></a></li><li lang="ru" role="menuitem"><a href="/ru/docs/Web/CSS" title="러시아어"><bdi>Русский</bdi></a></li><li lang="th" role="menuitem"><a href="/th/docs/Web/CSS" title="태국어"><bdi>ไทย</bdi></a></li><li lang="tr" role="menuitem"><a href="/tr/docs/Web/CSS" title="터키어"><bdi>Türkçe</bdi></a></li><li lang="uk" role="menuitem"><a href="/uk/docs/Web/CSS" title="우크라이나어"><bdi>Українська</bdi></a></li><li lang="vi" role="menuitem"><a href="/vi/docs/Web/CSS" title="베트남어"><bdi>Tiếng Việt</bdi></a></li><li lang="zh-CN" role="menuitem"><a href="/zh-CN/docs/Web/CSS" title="중국어 (간체)"><bdi>中文 (简体)</bdi></a></li><li lang="zh-TW" role="menuitem"><a href="/zh-TW/docs/Web/CSS" title="중국어 (번체)"><bdi>正體中文 (繁體)</bdi></a></li></ul></div></div></div><div class="wiki-left-present content-layout"><div id="content" class="article text-content"><article id="wikiArticle"><div></div>
-
-<p><span class="seoSummary"><strong>Cascading Style Sheets</strong>(<strong>CSS</strong>)는 <a href="/ko/docs/HTML" title="HyperText Markup Language">HTML</a>이나 <a class="new" href="/ko/docs/XML" rel="nofollow">XML</a>(<a href="/ko/docs/SVG">SVG</a>, <a href="/ko/docs/XHTML">XHTML</a> 같은 XML 방언(dialect) 포함)로 작성된 문서의 표현을 기술하기 위해 쓰이는 <a class="new" href="/ko/docs/Web/API/StyleSheet" rel="nofollow">스타일시트</a> 언어입니다.</span> CSS는 요소가 화면, 종이, 음성이나 다른 매체 상에 어떻게 렌더링되어야 하는지 기술합니다.</p>
-
-<p>CSS는 <strong><em>오픈 웹</em></strong>의 핵심 언어 중 하나이며 여러 브라우저가 표준으로 사용하는 <a class="external" href="http://w3.org/Style/CSS/#specs" rel="noopener">W3C 명세</a>가 있습니다. 레벨 단위로 개발한 CSS1은 더 이상 사용하지 않고, 다음 레벨인 CSS2.1은 권고안(recommendation)입니다. 더 작은 모듈로 나눈 <a href="/ko/docs/Web/CSS/CSS3" title="CSS3">CSS3</a>은 표준화 과정을 밟고 있습니다.</p>
-
-<section id="sect1">
-<ul class="card-grid">
- <li><span>CSS 소개</span>
-
-  <p>웹 개발을 처음 하신다면 <a href="/ko/docs/Learn/Getting_started_with_the_web/CSS_기본">CSS 기본</a> 문서를 읽어 CSS가 무엇인지와 사용법을 배워보세요.</p>
- </li>
- <li><span>CSS 자습서</span>
-  <p>시작하는 완전한 초보자를 돕는 <a href="/ko/docs/CSS/Getting_Started" title="Getting Started">단계별 입문서</a>. 필요한 기초를 모두 제공합니다.</p>
- </li>
- <li><span>CSS 참고서</span>
-  <p>숙련된 개발자를 위한 <a href="/ko/docs/Web/CSS/Reference">전체 CSS 참고서</a>는 CSS의 모든 속성과 개념을 설명합니다.</p>
- </li>
-</ul>
-
-<div class="row topicpage-table">
-<div class="section">
-<h2 class="Documentation" id="자습서">자습서</h2>
-
-<dl>
- <dt><a href="/ko/docs/Learn/CSS/Introduction_to_CSS">CSS 소개</a></dt>
- <dd>선택자, 속성, 규칙 작성, HTML에 CSS 적용하기, 길이와 색 등 단위 지정하기, 종속과 상속, 박스 모델, 디버깅 등 CSS의 작동 원리와 기본을 배웁니다.</dd>
- <dt><a href="/ko/docs/Learn/CSS/Styling_text">텍스트 꾸미기</a></dt>
- <dd>글꼴, 굵기, 기울이기, 줄 간격과 글자 간격, 그림자 등 텍스트 스타일의 기초를 논합니다. 사용자 설정 글꼴 적용, 목록과 링크 꾸미기로 마무리합니다.</dd>
- <dt><a href="/ko/docs/Learn/CSS/Styling_boxes">박스 꾸미기</a></dt>
- <dd>웹 페이지 레이아웃의 기초 중 하나인 박스 스타일을 살펴봅니다. 박스 모델에 대해 복습하고, 마진, 테두리, 패딩, 배경색, 이미지, 그림자, 필터 등 박스 레이아웃을 조절하는 법을 배웁니다.</dd>
- <dt><a href="/ko/docs/Learn/CSS/CSS_layout">CSS 레이아웃</a></dt>
- <dd>텍스트를 꾸미고 박스를 변형하는 등 CSS 기초를 살펴보았으니, 이제 화면이나 서로에게 상대적인 위치에 올바르게 배치하는 법을 배웁니다. 필요한 전제조건은 다루었으니 각기 다른 디스플레이 설정, 플로팅과 포지션을 사용하는 전통적인 레이아웃법 및 플렉스박스 등 새로운 방법 등 더 깊은 영역을 배웁니다.</dd>
-</dl>
-</div>
-
-<div class="section">
-<h2 id="참고서">참고서</h2>
-
-<ul>
- <li><a href="/ko/docs/Web/CSS/Reference">CSS 참고서</a>: 숙련된 웹 개발자를 위해 CSS의 모든 속성과 개념을 설명합니다.</li>
- <li>CSS 핵심 개념
-  <ul>
-   <li><a href="/ko/docs/Web/CSS/Syntax">언어 구문과 형태</a></li>
-   <li><a href="/ko/docs/Web/CSS/Specificity">명시도</a>, <a href="/ko/docs/Web/CSS/inheritance">상속</a>, <a href="/ko/docs/Web/CSS/Cascade">종속</a></li>
-   <li><a class="new" href="/ko/docs/Web/CSS/CSS_Values_and_Units" rel="nofollow">CSS 단위와 값</a></li>
-   <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">박스 모델</a>과 <a href="/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">여백 상쇄</a></li>
-   <li><a href="/ko/docs/Web/CSS/All_About_The_Containing_Block">컨테이닝 블록</a></li>
-   <li><a href="/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context">쌓임 맥락</a>과 <a href="/ko/docs/Web/Guide/CSS/Block_formatting_context">블록 서식 맥락</a></li>
-   <li><a href="/ko/docs/Web/CSS/initial_value">초기값</a>, <a href="/ko/docs/Web/CSS/computed_value">계산값</a>, <a href="/ko/docs/Web/CSS/used_value">사용값</a>, <a href="/ko/docs/Web/CSS/actual_value">실제값</a></li>
-   <li><a href="/ko/docs/Web/CSS/Shorthand_properties">CSS 단축 속성</a></li>
-   <li><a href="/ko/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS 플렉스 박스 레이아웃</a></li>
-   <li><a href="/ko/docs/Web/CSS/CSS_Grid_Layout">CSS 그리드 레이아웃</a></li>
-   <li><a href="/ko/docs/Web/CSS/Media_Queries">미디어 쿼리</a></li>
-  </ul>
- </li>
-</ul>
-
-<h2 id="쿡북">쿡북</h2>
-
-<p><a class="new" href="/ko/docs/Web/CSS/Layout_cookbook" rel="nofollow">CSS 레이아웃 쿡북</a>은 여러분의 웹사이트에서도 구현해야 할 수 있는, 흔히 쓰이는 레이아웃 패턴을 모아놓은 문서입니다. 프로젝트의 시작 코드는 물론이고, 레이아웃 명세를 사용하는 각기 다른 방법과 개발자로서 고를 수 있는 선택지를 제공합니다.</p>
-
-<h2 class="Tools" id="CSS_개발_도구">CSS 개발 도구</h2>
-
-<ul>
- <li>CSS가 유효한지 검사하는 <a class="external" href="http://jigsaw.w3.org/css-validator/" rel="noopener">W3C CSS Validation 서비스</a>. <a class="external" href="http://www.onlinewebcheck.com/" rel="noopener">OnlineWebCheck.com</a> 또한 같은 서비스입니다. 이들은 매우 유용한 디버깅 도구입니다.</li>
- <li><a class="new" href="/ko/docs/Tools" rel="nofollow">Firefox 개발자 도구</a>는 <a class="new" href="/ko/docs/Tools/Page_Inspector" rel="nofollow">검사기</a>와 <a class="new" href="/ko/docs/Tools/Style_Editor" rel="nofollow">스타일 편집기</a> 도구를 통해 페이지의 실시간 CSS 보기와 편집을 허용합니다.</li>
- <li>Firefox 전용 <a class="external" href="https://addons.mozilla.org/en-US/firefox/addon/web-developer/" rel="noopener">웹 개발자 확장</a>도 특정 사이트를 주시해 CSS를 추적하고 실시간 편집을 가능케 합니다.</li>
- <li><a class="new" href="/ko/docs/Web/CSS/Tools" rel="nofollow">기타 CSS 도구.</a></li>
-</ul>
-</div>
-</div>
-</section>
-
-<h2 id="같이_보기">같이 보기</h2>
-
-<ul>
- <li><a class="new" href="/ko/docs/Web/Demos_of_open_web_technologies#CSS" rel="nofollow">CSS 데모</a>: 최신 CSS 기술을 사용한 데모를 탐색하며 영감을 얻어보세요.</li>
- <li>CSS가 흔히 적용되는 웹 언어: <a href="/ko/docs/HTML">HTML</a>, <a href="/ko/docs/SVG">SVG</a>, <a href="/ko/docs/XHTML">XHTML</a>과 <a class="new" href="/ko/docs/XML" rel="nofollow">XML</a>.</li>
- <li>CSS를 광범위하게 사용하는 Mozilla 기술: <a href="/ko/docs/XUL">XUL</a>, <a href="/ko/Firefox">Firefox</a>, <a class="new" href="/ko/docs/Mozilla/Thunderbird" rel="nofollow">Thunderbird</a> <a href="/ko/docs/Extensions">확장기능</a>과 <a href="/ko/Add-ons/Themes">테마</a>.</li>
-</ul></article><div class="metadata"><section class="document-meta"><header class="visually-hidden"><h4>Metadata</h4></header> <ul><li class="last-modified"><b>Last modified:</b> <time dateTime="2019-09-10T23:37:54.081105">Sep 10, 2019</time>,<!-- --> <a href="https://wiki.developer.mozilla.org/ko/docs/Web/CSS$history" rel="nofollow">by MDN contributors</a></li></ul></section></div></div><div class="sidebar"><div class="quick-links"><div class="quick-links-head sidebar-heading">관련 주제</div><div><ol><li><strong><a href="/ko/docs/Web/CSS">CSS</a></strong></li><li><strong><a href="/ko/docs/Web/CSS/Reference">CSS Reference</a></strong></li></ol></div></div></div></div></main><section class="newsletter-container"><div id="newsletter-form-container" class="newsletter"><form class="newsletter-form nodisable" name="newsletter-form"><section class="newsletter-head"><h2 class="newsletter-teaser">Learn the best of web development</h2><p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p><p class="newsletter-lang" aria-hidden="false">The newsletter is offered in English only at the moment.</p></section><fieldset class="newsletter-fields"><input type="hidden" name="fmt" value="H"/><input type="hidden" name="newsletters" value="app-dev"/><div class="form-group newsletter-group-email"><label for="newsletter-email-input" class="form-label offscreen">E-mail</label><input type="email" id="newsletter-email-input" name="email" class="form-input newsletter-input-email" placeholder="you@example.com" required=""/></div><div id="newsletter-privacy" class="hidden" aria-hidden="true"><input type="checkbox" id="newsletter-privacy-input" name="privacy" required=""/><label for="newsletter-privacy-input">I’m okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.</label></div><div class="newsletter-group-submit"><button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">Sign up now</button></div></fieldset></form><button type="button" class="only-icon newsletter-hide" aria-controls="newsletter-form-container"><span>Hide Newsletter Sign-up</span><svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 28"><path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path></svg></button></div></section><footer id="nav-footer" class="nav-footer"><div class="center"><a href="/ko/" class="nav-footer-logo">MDN Web Docs</a><div class="footer-group footer-group-mdn"><h2 class="footer-title">MDN</h2><ul class="footer-list"><li><a href="/ko/docs/Web">Web Technologies</a></li><li><a href="/ko/docs/Learn">Learn Web Development</a></li><li><a href="/ko/docs/MDN/About">About MDN</a></li><li><a href="/ko/docs/MDN/Feedback">Feedback</a></li><li class="footer-social"><a href="https://twitter.com/mozdevnet"><svg class="icon icon-twitter" xmlns="http://www.w3.org/2000/svg" width="26" height="28" aria-label="Twitter" role="img" focusable="false"><path d="M25.312 6.375a10.85 10.85 0 0 1-2.531 2.609c.016.219.016.438.016.656 0 6.672-5.078 14.359-14.359 14.359-2.859 0-5.516-.828-7.75-2.266.406.047.797.063 1.219.063 2.359 0 4.531-.797 6.266-2.156a5.056 5.056 0 0 1-4.719-3.5c.313.047.625.078.953.078.453 0 .906-.063 1.328-.172a5.048 5.048 0 0 1-4.047-4.953v-.063a5.093 5.093 0 0 0 2.281.641 5.044 5.044 0 0 1-2.25-4.203c0-.938.25-1.797.688-2.547a14.344 14.344 0 0 0 10.406 5.281 5.708 5.708 0 0 1-.125-1.156 5.045 5.045 0 0 1 5.047-5.047 5.03 5.03 0 0 1 3.687 1.594 9.943 9.943 0 0 0 3.203-1.219 5.032 5.032 0 0 1-2.219 2.781c1.016-.109 2-.391 2.906-.781z"></path></svg></a></li><li class="footer-social"><a href="https://github.com/mdn/"><svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" aria-label="GitHub" role="img" focusable="false"><path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path></svg></a></li></ul></div><a href="https://mozilla.org" class="nav-footer-mozilla">Mozilla</a><div class="footer-group footer-group-mozilla"><h2 class="footer-title">Mozilla</h2><ul class="footer-list"><li><a href="https://www.mozilla.org/about/">About</a></li><li><a href="https://www.mozilla.org/contact/">Contact Us</a></li><li><a href="https://www.mozilla.org/firefox/?utm_source=developer.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral">Firefox</a></li><li class="footer-social"><a href="https://twitter.com/mozilla"><svg class="icon icon-twitter" xmlns="http://www.w3.org/2000/svg" width="26" height="28" aria-label="Twitter" role="img" focusable="false"><path d="M25.312 6.375a10.85 10.85 0 0 1-2.531 2.609c.016.219.016.438.016.656 0 6.672-5.078 14.359-14.359 14.359-2.859 0-5.516-.828-7.75-2.266.406.047.797.063 1.219.063 2.359 0 4.531-.797 6.266-2.156a5.056 5.056 0 0 1-4.719-3.5c.313.047.625.078.953.078.453 0 .906-.063 1.328-.172a5.048 5.048 0 0 1-4.047-4.953v-.063a5.093 5.093 0 0 0 2.281.641 5.044 5.044 0 0 1-2.25-4.203c0-.938.25-1.797.688-2.547a14.344 14.344 0 0 0 10.406 5.281 5.708 5.708 0 0 1-.125-1.156 5.045 5.045 0 0 1 5.047-5.047 5.03 5.03 0 0 1 3.687 1.594 9.943 9.943 0 0 0 3.203-1.219 5.032 5.032 0 0 1-2.219 2.781c1.016-.109 2-.391 2.906-.781z"></path></svg></a></li><li class="footer-social"><a href="https://www.instagram.com/mozillagram/"><svg class="icon icon-instagram" xmlns="http://www.w3.org/2000/svg" width="24" height="28" aria-label="Instagram" role="img" focusable="false"><path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm2.156 0c0 3.406-2.75 6.156-6.156 6.156S5.844 17.406 5.844 14 8.594 7.844 12 7.844s6.156 2.75 6.156 6.156zm1.688-6.406c0 .797-.641 1.437-1.437 1.437S16.97 8.39 16.97 7.594s.641-1.437 1.437-1.437 1.437.641 1.437 1.437zM12 4.156c-1.75 0-5.5-.141-7.078.484-.547.219-.953.484-1.375.906s-.688.828-.906 1.375c-.625 1.578-.484 5.328-.484 7.078s-.141 5.5.484 7.078c.219.547.484.953.906 1.375s.828.688 1.375.906c1.578.625 5.328.484 7.078.484s5.5.141 7.078-.484c.547-.219.953-.484 1.375-.906s.688-.828.906-1.375c.625-1.578.484-5.328.484-7.078s.141-5.5-.484-7.078c-.219-.547-.484-.953-.906-1.375s-.828-.688-1.375-.906C17.5 4.015 13.75 4.156 12 4.156zM24 14c0 1.656.016 3.297-.078 4.953-.094 1.922-.531 3.625-1.937 5.031s-3.109 1.844-5.031 1.937c-1.656.094-3.297.078-4.953.078s-3.297.016-4.953-.078c-1.922-.094-3.625-.531-5.031-1.937S.173 20.875.08 18.953C-.014 17.297.002 15.656.002 14s-.016-3.297.078-4.953c.094-1.922.531-3.625 1.937-5.031s3.109-1.844 5.031-1.937c1.656-.094 3.297-.078 4.953-.078s3.297-.016 4.953.078c1.922.094 3.625.531 5.031 1.937s1.844 3.109 1.937 5.031C24.016 10.703 24 12.344 24 14z"></path></svg></a></li></ul></div><ul class="footer-tos"><li><a href="https://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li><li><a href="https://www.mozilla.org/privacy/websites/">Privacy</a></li><li><a href="https://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li></ul><div id="license" class="contentinfo"><p>© 2005-<!-- -->2019<!-- --> Mozilla and individual contributors.</p><p>Content is available under<!-- --> <a href="/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p></div></div></footer></div>
-<script>window._react_data = JSON.parse("{\"locale\":\"ko\",\"stringCatalog\":{\"%(sentDate)s by %(user)s\":\"%(user)s %(sentDate)s\",\"A newer version of this article has been published since this draft was saved. You can restore the draft to view the content, but you will not be able to submit it for publishing.\":\"\uCD08\uC548\uC774 \uC800\uC7A5\uB41C \uD6C4\uC5D0 \uC774 \uAE00\uC758 \uC0C8 \uBC84\uC804\uC774 \uACF5\uAC1C\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uCF58\uD150\uCE20\uB97C \uBCF4\uAE30 \uC704\uD574\uC11C \uCD08\uC548\uC744 \uBCF5\uC6D0\uD560 \uC218 \uC788\uC9C0\uB9CC \uCD08\uC548\uC744 \uC800\uC7A5\uD574\uC11C \uACF5\uAC1C\uB85C \uC804\uD658\uD560 \uC218\uB294 \uC5C6\uC2B5\uB2C8\uB2E4.\",\"Article Title Lookup / Link Text\":\"\uBB38\uC11C \uC81C\uBAA9 \uBCF4\uAE30 / \uD14D\uC2A4\uD2B8 \uB9C1\uD06C\",\"Aspect ratio\":\"\uD654\uBA74\uBE44\",\"Attachments\":\"\uCCA8\uBD80 \uC790\uB8CC\",\"Autosave enabled.\":\"\uC790\uB3D9 \uC800\uC7A5\uC774 \uD65C\uC131\uD654\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\",\"CSS\":\"CSS\",\"Changes saved.\":\"\uBCC0\uACBD \uB0B4\uC6A9\uC774 \uC800\uC7A5\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\",\"Close\":\"\uB2EB\uAE30\",\"Close notification\":\"\uC54C\uB9BC \uB2EB\uAE30\",\"Close submenu\":\"\uD558\uC704 \uBA54\uB274 \uB2EB\uAE30\",\"Compare this date to the latest revision date to ensure you're not overwriting later changes.\":\"\uC0C8\uB85C\uC6B4 \uBCC0\uACBD\uC0AC\uD56D\uC744 \uB36E\uC5B4\uC4F0\uC9C0 \uC54A\uB3C4\uB85D \uC774 \uB0A0\uC9DC\uB97C \uCD5C\uC885 \uB0A0\uC9DC\uC640 \uBE44\uAD50\uD558\uC138\uC694.\",\"Create a Redirect\":\"\uC790\uB3D9 \uC774\uB3D9 \uB9CC\uB4E4\uAE30\",\"Default\":\"\uAE30\uBCF8 \uC124\uC815\",\"Details\":\"\uC790\uC138\uD55C \uB0B4\uC6A9\",\"Discard draft.\":\"\uCD08\uC548\uC744 \uC0AD\uC81C\uD569\uB2C8\uB2E4.\",\"Document\":\"\uBB38\uC11C\",\"Draft autosaved:\":\"\uCD08\uC548\uC774 \uC790\uB3D9 \uC800\uC7A5\uB428:\",\"Draft discarded.\":\"\uCD08\uC548\uC774 \uC0AD\uC81C\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\",\"Draft discarded:\":\"\uCD08\uC548\uC774 \uC0AD\uC81C\uB428:\",\"Draft published:\":\"\uCD08\uC548\uC774 \uACF5\uAC1C\uB428:\",\"Draft restored.\":\"\uCD08\uC548\uC774 \uBCF5\uC6D0\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\",\"Edit Page\":\"\uD398\uC774\uC9C0 \uD3B8\uC9D1\",\"Edit profile\":\"\uD504\uB85C\uD544 \uD3B8\uC9D1\",\"Embed YouTube Video\":\"YouTube \uBE44\uB514\uC624 \uC0BD\uC785\",\"Error loading content, please refresh the page\":\"\uCEE8\uD150\uCE20 \uB85C\uB529 \uC624\uB958, \uD398\uC774\uC9C0\uB97C \uC0C8\uB85C\uACE0\uCE68 \uD574 \uC8FC\uC2ED\uC2DC\uC624\",\"Error submitting as %(type)s\":\"%(type)s\uB85C \uC624\uB958 \uBCF4\uB0C4\",\"HTML\":\"HTML\",\"Hang on! Updating filters\u2026\":\"\uAE30\uB2E4\uB824 \uC8FC\uC138\uC694 ! \uD544\uD130\uB97C \uC5C5\uB370\uC774\uD2B8 \uC911\uC785\uB2C8\uB2E4\u2026\",\"History\":\"\uC774\uB825\",\"Insert Code Sample Template\":\"\uCF54\uB4DC \uC0D8\uD50C \uC11C\uC2DD \uC0BD\uC785\",\"Insert Code Sample iFrame\":\"\uCF54\uB4DC \uC0D8\uD50C iFrame \uC0BD\uC785\",\"JavaScript\":\"JavaScript\",\"Launch\":\"\uB370\uBAA8 \uC2E4\uD589\",\"Link\":\"\uB9C1\uD06C\",\"Locate a YouTube Video\":\"YouTube \uBE44\uB514\uC624 \uC704\uCE58 \uC9C0\uC815\",\"MDN Redirect\":\"MDN \uC790\uB3D9 \uC774\uB3D9\",\"Never\":\"\uD558\uC9C0 \uC54A\uC74C\",\"New interest...\":\"\uC0C8\uB85C\uC6B4 \uAD00\uC2EC\uC0AC...\",\"New tag...\":\"\uC0C8 \uD0DC\uADF8...\",\"No\":\"\uC544\uB2C8\uC624\",\"No Highlight\":\"\uAC15\uC870 \uC5C6\uC74C\",\"No attachments available\":\"\uC0AC\uC6A9 \uAC00\uB2A5\uD55C \uCCA8\uBD80 \uD30C\uC77C\uC774 \uC5C6\uC74C\",\"No selection\":\"\uC120\uD0DD\uD55C \uD56D\uBAA9 \uC5C6\uC74C\",\"Open\":\"\uC5F4\uAE30\",\"Open implementation notes\":\"\uAD6C\uD604 \uB178\uD2B8 \uC5F4\uAE30\",\"Open in %(site)s\":\"%(site)s\uC5D0\uC11C \uC5F4\uAE30\u00A0\",\"Paste YouTube Video URL\":\"YouTube \uBE44\uB514\uC624 URL \uBD99\uC5EC\uB123\uAE30\",\"Published version\":\"\uACF5\uAC1C\uB41C \uBC84\uC804\",\"Publishing changes\u2026\":\"\uBCC0\uACBD \uC0AC\uD56D \uACF5\uAC1C\uC911\u2026\",\"Publishing failed. Please copy and paste your changes into a safe place and try submitting the form using the \\\"Publish\\\" button.\":\"\uAC8C\uC2DC\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4. \uC548\uC804\uD55C \uACF3\uC5D0 \uBCC0\uACBD\uC0AC\uD56D\uC744 \uBCF5\uC0AC\uD558\uACE0 \\\"\uAC8C\uC2DC\\\" \uBC84\uD2BC\uC744 \uB20C\uB7EC\uC11C \uC591\uC2DD\uC744 \uB2E4\uC2DC \uC81C\uCD9C\uD558\uC138\uC694.\",\"Publishing failed. You are not currently signed in. Please use a new tab to sign in and try publishing again.\":\"\uAC8C\uC2DC\uD558\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4. \uB85C\uADF8\uC778\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4. \uC0C8\uB85C\uC6B4 \uD0ED\uC744 \uC5F4\uC5B4\uC11C \uB85C\uADF8\uC778\uD558\uACE0 \uB2E4\uC2DC \uAC8C\uC2DC\uD558\uC138\uC694.\",\"Related Topics\":\"\uAD00\uB828 \uC8FC\uC81C\",\"Restore draft.\":\"\uCD08\uC548\uC744 \uBCF5\uC6D0\uD569\uB2C8\uB2E4.\",\"Result\":\"\uACB0\uACFC\",\"Return to compatibility table.\":\"\uD638\uD658\uC131 \uD14C\uC774\uBE14\uB85C \uB3CC\uC544\uAC11\uB2C8\uB2E4.\",\"Revert\":\"\uBCF5\uC6D0\",\"Revision history.\":\"\uAC1C\uC815\uD310 \uD788\uC2A4\uD1A0\uB9AC\uC785\uB2C8\uB2E4.\",\"Sample CSS Content\":\"CSS \uCF58\uD150\uCE20 \uC608\uC81C\",\"Sample Finder\":\"\uC0D8\uD50C \uCC3E\uAE30\",\"Sample HTML Content\":\"HTML \uCF58\uD150\uCE20 \uC608\uC81C\",\"Sample JavaScript Content\":\"JavaScript \uCF58\uD150\uCE20 \uC608\uC81C\",\"Search MDN\":\"MDN \uAC80\uC0C9\",\"Search Stack Overflow\":\"\uC2A4\uD0DD \uC624\uBC84\uD50C\uB85C\uC6B0 \uAC80\uC0C9\",\"Section\":\"\uC139\uC158\",\"Sections in Document\":\"\uBB38\uC11C \uB0B4 \uC139\uC158\",\"Select a section\":\"\uC139\uC158 \uC120\uD0DD\",\"Select an attachment\":\"\uCCA8\uBD80 \uD30C\uC77C \uC120\uD0DD\",\"Selected: \":\"\uC120\uD0DD\uB428: \",\"Sign in\":\"\uB85C\uADF8\uC778\",\"Sign out\":\"\uB85C\uADF8 \uC544\uC6C3\",\"Submitted as %(submissionType)s\":\"%(submissionType)s\uC73C\uB85C \uC81C\uCD9C\",\"Submitting...\":\"\uC81C\uCD9C \uC911...\",\"Syntax Highlighter\":\"\uAD6C\uBB38 \uAC15\uC870\",\"The URL you've entered doesn't appear to be valid\":\"\uC785\uB825\uD55C URL\uC774 \uC720\uD6A8\uD558\uAC8C \uBCF4\uC774\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4\",\"URL\":\"URL\",\"Updated filters.\":\"\uD544\uD130\uB97C \uC5C5\uB370\uC774\uD2B8 \uD588\uC2B5\uB2C8\uB2E4.\",\"View Page\":\"\uD398\uC774\uC9C0 \uBCF4\uAE30\",\"View draft.\":\"\uCD08\uC548\uC744 \uBD05\uB2C8\uB2E4.\",\"View profile\":\"\uD504\uB85C\uD544 \uBCF4\uAE30\",\"Viewing old draft. This draft cannot be published.\":\"\uC774\uC804 \uCD08\uC548\uC744 \uBD05\uB2C8\uB2E4. \uC774 \uCD08\uC548\uC740 \uACF5\uAC1C\uB85C \uC804\uD658\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.\",\"What should the sample title be?\":\"\uC0D8\uD50C \uC81C\uBAA9\uC744 \uBB34\uC5C7\uC73C\uB85C \uD560\uAE4C\uC694?\",\"Would you answer 4 questions for us? <a %(url)s>Open the survey in a new tab</a> and fill it out when you are done on the site. Thanks!\":\"\uC9C8\uBB38 4\uAC1C\uB9CC \uB2F5\uBCC0\uD574 \uC8FC\uC2DC\uACA0\uC5B4\uC694? <a %(url)s>\uC0C8 \uD0ED\uC5D0\uC11C \uC124\uBB38\uC744 \uC5F4\uACE0</a> \uC0AC\uC774\uD2B8\uC5D0\uC11C \uB05D\uB098\uBA74 \uAE30\uC785\uD574 \uC8FC\uC138\uC694. \uACE0\uB9D9\uC2B5\uB2C8\uB2E4!\",\"Yes\":\"\uB124\",\"You are now viewing this site in %(localeName)s. Do you always want to view this site in %(localeName)s?\":\"\uC774 \uC0AC\uC774\uD2B8\uB97C %(localeName)s\uC5D0\uC11C \uBCF4\uB824\uACE0 \uD569\uB2C8\uB2E4. \uC774 \uC0AC\uC774\uD2B8\uB97C \uD56D\uC0C1 %(localeName)s\uC5D0\uC11C \uBCF4\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?\",\"You have a draft from: %(time)s.\":\"%(time)s\uC5D0 \uC800\uC7A5\uD55C \uCD08\uC548\uC774 \uC788\uC2B5\uB2C8\uB2E4.\",\"You must input a valid YouTube video URL.\":\"\uC720\uD6A8\uD55C YouTube \uBE44\uB514\uC624 URL\uC744 \uC785\uB825\uD574\uC57C \uD569\uB2C8\uB2E4.\",\"Your browser does not support MathML. A CSS fallback has been used instead.\":\"\uBE0C\uB77C\uC6B0\uC800\uAC00 MathML\uC744 \uC9C0\uC6D0\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. CSS \uD3F4\uBC31\uC774 \uB300\uC2E0 \uC0AC\uC6A9\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\",\"an unknown date\":\"\uC54C \uC218 \uC5C6\uB294 \uB0A0\uC9DC\"},\"pluralExpression\":\"0\",\"url\":\"/ko/docs/Web/CSS\",\"documentData\":{\"locale\":\"ko\",\"slug\":\"Web/CSS\",\"enSlug\":\"Web/CSS\",\"id\":33875,\"title\":\"CSS: Cascading Style Sheets\",\"summary\":\"<strong>Cascading Style Sheets</strong>(<strong>CSS</strong>)\uB294 <a href=\\\"/ko/docs/HTML\\\" title=\\\"HyperText Markup Language\\\">HTML</a>\uC774\uB098 <a href=\\\"/ko/docs/XML\\\">XML</a>(<a href=\\\"/ko/docs/SVG\\\">SVG</a>, <a href=\\\"/ko/docs/XHTML\\\">XHTML</a> \uAC19\uC740 XML \uBC29\uC5B8(dialect) \uD3EC\uD568)\uB85C \uC791\uC131\uB41C \uBB38\uC11C\uC758 \uD45C\uD604\uC744 \uAE30\uC220\uD558\uAE30 \uC704\uD574 \uC4F0\uC774\uB294 <a href=\\\"/ko/docs/Web/API/StyleSheet\\\">\uC2A4\uD0C0\uC77C\uC2DC\uD2B8</a> \uC5B8\uC5B4\uC785\uB2C8\uB2E4.\",\"language\":\"\uD55C\uAD6D\uC5B4\",\"hrefLang\":\"ko\",\"absoluteURL\":\"/ko/docs/Web/CSS\",\"wikiURL\":\"https://wiki.developer.mozilla.org/ko/docs/Web/CSS\",\"translateURL\":null,\"bodyHTML\":\"<div></div>\\n\\n<p><span class=\\\"seoSummary\\\"><strong>Cascading Style Sheets</strong>(<strong>CSS</strong>)\uB294 <a href=\\\"/ko/docs/HTML\\\" title=\\\"HyperText Markup Language\\\">HTML</a>\uC774\uB098 <a class=\\\"new\\\" href=\\\"/ko/docs/XML\\\" rel=\\\"nofollow\\\">XML</a>(<a href=\\\"/ko/docs/SVG\\\">SVG</a>, <a href=\\\"/ko/docs/XHTML\\\">XHTML</a> \uAC19\uC740 XML \uBC29\uC5B8(dialect) \uD3EC\uD568)\uB85C \uC791\uC131\uB41C \uBB38\uC11C\uC758 \uD45C\uD604\uC744 \uAE30\uC220\uD558\uAE30 \uC704\uD574 \uC4F0\uC774\uB294 <a class=\\\"new\\\" href=\\\"/ko/docs/Web/API/StyleSheet\\\" rel=\\\"nofollow\\\">\uC2A4\uD0C0\uC77C\uC2DC\uD2B8</a> \uC5B8\uC5B4\uC785\uB2C8\uB2E4.</span> CSS\uB294 \uC694\uC18C\uAC00 \uD654\uBA74, \uC885\uC774, \uC74C\uC131\uC774\uB098 \uB2E4\uB978 \uB9E4\uCCB4 \uC0C1\uC5D0 \uC5B4\uB5BB\uAC8C \uB80C\uB354\uB9C1\uB418\uC5B4\uC57C \uD558\uB294\uC9C0 \uAE30\uC220\uD569\uB2C8\uB2E4.</p>\\n\\n<p>CSS\uB294 <strong><em>\uC624\uD508 \uC6F9</em></strong>\uC758 \uD575\uC2EC \uC5B8\uC5B4 \uC911 \uD558\uB098\uC774\uBA70 \uC5EC\uB7EC \uBE0C\uB77C\uC6B0\uC800\uAC00 \uD45C\uC900\uC73C\uB85C \uC0AC\uC6A9\uD558\uB294 <a class=\\\"external\\\" href=\\\"http://w3.org/Style/CSS/#specs\\\" rel=\\\"noopener\\\">W3C \uBA85\uC138</a>\uAC00 \uC788\uC2B5\uB2C8\uB2E4. \uB808\uBCA8 \uB2E8\uC704\uB85C \uAC1C\uBC1C\uD55C CSS1\uC740 \uB354 \uC774\uC0C1 \uC0AC\uC6A9\uD558\uC9C0 \uC54A\uACE0, \uB2E4\uC74C \uB808\uBCA8\uC778 CSS2.1\uC740 \uAD8C\uACE0\uC548(recommendation)\uC785\uB2C8\uB2E4. \uB354 \uC791\uC740 \uBAA8\uB4C8\uB85C \uB098\uB208 <a href=\\\"/ko/docs/Web/CSS/CSS3\\\" title=\\\"CSS3\\\">CSS3</a>\uC740 \uD45C\uC900\uD654 \uACFC\uC815\uC744 \uBC1F\uACE0 \uC788\uC2B5\uB2C8\uB2E4.</p>\\n\\n<section id=\\\"sect1\\\">\\n<ul class=\\\"card-grid\\\">\\n <li><span>CSS \uC18C\uAC1C</span>\\n\\n  <p>\uC6F9 \uAC1C\uBC1C\uC744 \uCC98\uC74C \uD558\uC2E0\uB2E4\uBA74 <a href=\\\"/ko/docs/Learn/Getting_started_with_the_web/CSS_\uAE30\uBCF8\\\">CSS \uAE30\uBCF8</a> \uBB38\uC11C\uB97C \uC77D\uC5B4 CSS\uAC00 \uBB34\uC5C7\uC778\uC9C0\uC640 \uC0AC\uC6A9\uBC95\uC744 \uBC30\uC6CC\uBCF4\uC138\uC694.</p>\\n </li>\\n <li><span>CSS \uC790\uC2B5\uC11C</span>\\n  <p>\uC2DC\uC791\uD558\uB294 \uC644\uC804\uD55C \uCD08\uBCF4\uC790\uB97C \uB3D5\uB294 <a href=\\\"/ko/docs/CSS/Getting_Started\\\" title=\\\"Getting Started\\\">\uB2E8\uACC4\uBCC4 \uC785\uBB38\uC11C</a>. \uD544\uC694\uD55C \uAE30\uCD08\uB97C \uBAA8\uB450 \uC81C\uACF5\uD569\uB2C8\uB2E4.</p>\\n </li>\\n <li><span>CSS \uCC38\uACE0\uC11C</span>\\n  <p>\uC219\uB828\uB41C \uAC1C\uBC1C\uC790\uB97C \uC704\uD55C <a href=\\\"/ko/docs/Web/CSS/Reference\\\">\uC804\uCCB4 CSS \uCC38\uACE0\uC11C</a>\uB294 CSS\uC758 \uBAA8\uB4E0 \uC18D\uC131\uACFC \uAC1C\uB150\uC744 \uC124\uBA85\uD569\uB2C8\uB2E4.</p>\\n </li>\\n</ul>\\n\\n<div class=\\\"row topicpage-table\\\">\\n<div class=\\\"section\\\">\\n<h2 class=\\\"Documentation\\\" id=\\\"\uC790\uC2B5\uC11C\\\">\uC790\uC2B5\uC11C</h2>\\n\\n<dl>\\n <dt><a href=\\\"/ko/docs/Learn/CSS/Introduction_to_CSS\\\">CSS \uC18C\uAC1C</a></dt>\\n <dd>\uC120\uD0DD\uC790, \uC18D\uC131, \uADDC\uCE59 \uC791\uC131, HTML\uC5D0 CSS \uC801\uC6A9\uD558\uAE30, \uAE38\uC774\uC640 \uC0C9 \uB4F1 \uB2E8\uC704 \uC9C0\uC815\uD558\uAE30, \uC885\uC18D\uACFC \uC0C1\uC18D, \uBC15\uC2A4 \uBAA8\uB378, \uB514\uBC84\uAE45 \uB4F1 CSS\uC758 \uC791\uB3D9 \uC6D0\uB9AC\uC640 \uAE30\uBCF8\uC744 \uBC30\uC6C1\uB2C8\uB2E4.</dd>\\n <dt><a href=\\\"/ko/docs/Learn/CSS/Styling_text\\\">\uD14D\uC2A4\uD2B8 \uAFB8\uBBF8\uAE30</a></dt>\\n <dd>\uAE00\uAF34, \uAD75\uAE30, \uAE30\uC6B8\uC774\uAE30, \uC904 \uAC04\uACA9\uACFC \uAE00\uC790 \uAC04\uACA9, \uADF8\uB9BC\uC790 \uB4F1 \uD14D\uC2A4\uD2B8 \uC2A4\uD0C0\uC77C\uC758 \uAE30\uCD08\uB97C \uB17C\uD569\uB2C8\uB2E4. \uC0AC\uC6A9\uC790 \uC124\uC815 \uAE00\uAF34 \uC801\uC6A9, \uBAA9\uB85D\uACFC \uB9C1\uD06C \uAFB8\uBBF8\uAE30\uB85C \uB9C8\uBB34\uB9AC\uD569\uB2C8\uB2E4.</dd>\\n <dt><a href=\\\"/ko/docs/Learn/CSS/Styling_boxes\\\">\uBC15\uC2A4 \uAFB8\uBBF8\uAE30</a></dt>\\n <dd>\uC6F9 \uD398\uC774\uC9C0 \uB808\uC774\uC544\uC6C3\uC758 \uAE30\uCD08 \uC911 \uD558\uB098\uC778 \uBC15\uC2A4 \uC2A4\uD0C0\uC77C\uC744 \uC0B4\uD3B4\uBD05\uB2C8\uB2E4. \uBC15\uC2A4 \uBAA8\uB378\uC5D0 \uB300\uD574 \uBCF5\uC2B5\uD558\uACE0, \uB9C8\uC9C4, \uD14C\uB450\uB9AC, \uD328\uB529, \uBC30\uACBD\uC0C9, \uC774\uBBF8\uC9C0, \uADF8\uB9BC\uC790, \uD544\uD130 \uB4F1 \uBC15\uC2A4 \uB808\uC774\uC544\uC6C3\uC744 \uC870\uC808\uD558\uB294 \uBC95\uC744 \uBC30\uC6C1\uB2C8\uB2E4.</dd>\\n <dt><a href=\\\"/ko/docs/Learn/CSS/CSS_layout\\\">CSS \uB808\uC774\uC544\uC6C3</a></dt>\\n <dd>\uD14D\uC2A4\uD2B8\uB97C \uAFB8\uBBF8\uACE0 \uBC15\uC2A4\uB97C \uBCC0\uD615\uD558\uB294 \uB4F1 CSS \uAE30\uCD08\uB97C \uC0B4\uD3B4\uBCF4\uC558\uC73C\uB2C8, \uC774\uC81C \uD654\uBA74\uC774\uB098 \uC11C\uB85C\uC5D0\uAC8C \uC0C1\uB300\uC801\uC778 \uC704\uCE58\uC5D0 \uC62C\uBC14\uB974\uAC8C \uBC30\uCE58\uD558\uB294 \uBC95\uC744 \uBC30\uC6C1\uB2C8\uB2E4. \uD544\uC694\uD55C \uC804\uC81C\uC870\uAC74\uC740 \uB2E4\uB8E8\uC5C8\uC73C\uB2C8 \uAC01\uAE30 \uB2E4\uB978 \uB514\uC2A4\uD50C\uB808\uC774 \uC124\uC815, \uD50C\uB85C\uD305\uACFC \uD3EC\uC9C0\uC158\uC744 \uC0AC\uC6A9\uD558\uB294 \uC804\uD1B5\uC801\uC778 \uB808\uC774\uC544\uC6C3\uBC95 \uBC0F \uD50C\uB809\uC2A4\uBC15\uC2A4 \uB4F1 \uC0C8\uB85C\uC6B4 \uBC29\uBC95 \uB4F1 \uB354 \uAE4A\uC740 \uC601\uC5ED\uC744 \uBC30\uC6C1\uB2C8\uB2E4.</dd>\\n</dl>\\n</div>\\n\\n<div class=\\\"section\\\">\\n<h2 id=\\\"\uCC38\uACE0\uC11C\\\">\uCC38\uACE0\uC11C</h2>\\n\\n<ul>\\n <li><a href=\\\"/ko/docs/Web/CSS/Reference\\\">CSS \uCC38\uACE0\uC11C</a>: \uC219\uB828\uB41C \uC6F9 \uAC1C\uBC1C\uC790\uB97C \uC704\uD574 CSS\uC758 \uBAA8\uB4E0 \uC18D\uC131\uACFC \uAC1C\uB150\uC744 \uC124\uBA85\uD569\uB2C8\uB2E4.</li>\\n <li>CSS \uD575\uC2EC \uAC1C\uB150\\n  <ul>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Syntax\\\">\uC5B8\uC5B4 \uAD6C\uBB38\uACFC \uD615\uD0DC</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Specificity\\\">\uBA85\uC2DC\uB3C4</a>, <a href=\\\"/ko/docs/Web/CSS/inheritance\\\">\uC0C1\uC18D</a>, <a href=\\\"/ko/docs/Web/CSS/Cascade\\\">\uC885\uC18D</a></li>\\n   <li><a class=\\\"new\\\" href=\\\"/ko/docs/Web/CSS/CSS_Values_and_Units\\\" rel=\\\"nofollow\\\">CSS \uB2E8\uC704\uC640 \uAC12</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model\\\">\uBC15\uC2A4 \uBAA8\uB378</a>\uACFC <a href=\\\"/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing\\\">\uC5EC\uBC31 \uC0C1\uC1C4</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/All_About_The_Containing_Block\\\">\uCEE8\uD14C\uC774\uB2DD \uBE14\uB85D</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context\\\">\uC313\uC784 \uB9E5\uB77D</a>\uACFC <a href=\\\"/ko/docs/Web/Guide/CSS/Block_formatting_context\\\">\uBE14\uB85D \uC11C\uC2DD \uB9E5\uB77D</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/initial_value\\\">\uCD08\uAE30\uAC12</a>, <a href=\\\"/ko/docs/Web/CSS/computed_value\\\">\uACC4\uC0B0\uAC12</a>, <a href=\\\"/ko/docs/Web/CSS/used_value\\\">\uC0AC\uC6A9\uAC12</a>, <a href=\\\"/ko/docs/Web/CSS/actual_value\\\">\uC2E4\uC81C\uAC12</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Shorthand_properties\\\">CSS \uB2E8\uCD95 \uC18D\uC131</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/CSS_Flexible_Box_Layout\\\">CSS \uD50C\uB809\uC2A4 \uBC15\uC2A4 \uB808\uC774\uC544\uC6C3</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/CSS_Grid_Layout\\\">CSS \uADF8\uB9AC\uB4DC \uB808\uC774\uC544\uC6C3</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Media_Queries\\\">\uBBF8\uB514\uC5B4 \uCFFC\uB9AC</a></li>\\n  </ul>\\n </li>\\n</ul>\\n\\n<h2 id=\\\"\uCFE1\uBD81\\\">\uCFE1\uBD81</h2>\\n\\n<p><a class=\\\"new\\\" href=\\\"/ko/docs/Web/CSS/Layout_cookbook\\\" rel=\\\"nofollow\\\">CSS \uB808\uC774\uC544\uC6C3 \uCFE1\uBD81</a>\uC740 \uC5EC\uB7EC\uBD84\uC758 \uC6F9\uC0AC\uC774\uD2B8\uC5D0\uC11C\uB3C4 \uAD6C\uD604\uD574\uC57C \uD560 \uC218 \uC788\uB294, \uD754\uD788 \uC4F0\uC774\uB294 \uB808\uC774\uC544\uC6C3 \uD328\uD134\uC744 \uBAA8\uC544\uB193\uC740 \uBB38\uC11C\uC785\uB2C8\uB2E4. \uD504\uB85C\uC81D\uD2B8\uC758 \uC2DC\uC791 \uCF54\uB4DC\uB294 \uBB3C\uB860\uC774\uACE0, \uB808\uC774\uC544\uC6C3 \uBA85\uC138\uB97C \uC0AC\uC6A9\uD558\uB294 \uAC01\uAE30 \uB2E4\uB978 \uBC29\uBC95\uACFC \uAC1C\uBC1C\uC790\uB85C\uC11C \uACE0\uB97C \uC218 \uC788\uB294 \uC120\uD0DD\uC9C0\uB97C \uC81C\uACF5\uD569\uB2C8\uB2E4.</p>\\n\\n<h2 class=\\\"Tools\\\" id=\\\"CSS_\uAC1C\uBC1C_\uB3C4\uAD6C\\\">CSS \uAC1C\uBC1C \uB3C4\uAD6C</h2>\\n\\n<ul>\\n <li>CSS\uAC00 \uC720\uD6A8\uD55C\uC9C0 \uAC80\uC0AC\uD558\uB294 <a class=\\\"external\\\" href=\\\"http://jigsaw.w3.org/css-validator/\\\" rel=\\\"noopener\\\">W3C CSS Validation \uC11C\uBE44\uC2A4</a>. <a class=\\\"external\\\" href=\\\"http://www.onlinewebcheck.com/\\\" rel=\\\"noopener\\\">OnlineWebCheck.com</a> \uB610\uD55C \uAC19\uC740 \uC11C\uBE44\uC2A4\uC785\uB2C8\uB2E4. \uC774\uB4E4\uC740 \uB9E4\uC6B0 \uC720\uC6A9\uD55C \uB514\uBC84\uAE45 \uB3C4\uAD6C\uC785\uB2C8\uB2E4.</li>\\n <li><a class=\\\"new\\\" href=\\\"/ko/docs/Tools\\\" rel=\\\"nofollow\\\">Firefox \uAC1C\uBC1C\uC790 \uB3C4\uAD6C</a>\uB294 <a class=\\\"new\\\" href=\\\"/ko/docs/Tools/Page_Inspector\\\" rel=\\\"nofollow\\\">\uAC80\uC0AC\uAE30</a>\uC640 <a class=\\\"new\\\" href=\\\"/ko/docs/Tools/Style_Editor\\\" rel=\\\"nofollow\\\">\uC2A4\uD0C0\uC77C \uD3B8\uC9D1\uAE30</a> \uB3C4\uAD6C\uB97C \uD1B5\uD574 \uD398\uC774\uC9C0\uC758 \uC2E4\uC2DC\uAC04 CSS \uBCF4\uAE30\uC640 \uD3B8\uC9D1\uC744 \uD5C8\uC6A9\uD569\uB2C8\uB2E4.</li>\\n <li>Firefox \uC804\uC6A9 <a class=\\\"external\\\" href=\\\"https://addons.mozilla.org/en-US/firefox/addon/web-developer/\\\" rel=\\\"noopener\\\">\uC6F9 \uAC1C\uBC1C\uC790 \uD655\uC7A5</a>\uB3C4 \uD2B9\uC815 \uC0AC\uC774\uD2B8\uB97C \uC8FC\uC2DC\uD574 CSS\uB97C \uCD94\uC801\uD558\uACE0 \uC2E4\uC2DC\uAC04 \uD3B8\uC9D1\uC744 \uAC00\uB2A5\uCF00 \uD569\uB2C8\uB2E4.</li>\\n <li><a class=\\\"new\\\" href=\\\"/ko/docs/Web/CSS/Tools\\\" rel=\\\"nofollow\\\">\uAE30\uD0C0 CSS \uB3C4\uAD6C.</a></li>\\n</ul>\\n</div>\\n</div>\\n</section>\\n\\n<h2 id=\\\"\uAC19\uC774_\uBCF4\uAE30\\\">\uAC19\uC774 \uBCF4\uAE30</h2>\\n\\n<ul>\\n <li><a class=\\\"new\\\" href=\\\"/ko/docs/Web/Demos_of_open_web_technologies#CSS\\\" rel=\\\"nofollow\\\">CSS \uB370\uBAA8</a>: \uCD5C\uC2E0 CSS \uAE30\uC220\uC744 \uC0AC\uC6A9\uD55C \uB370\uBAA8\uB97C \uD0D0\uC0C9\uD558\uBA70 \uC601\uAC10\uC744 \uC5BB\uC5B4\uBCF4\uC138\uC694.</li>\\n <li>CSS\uAC00 \uD754\uD788 \uC801\uC6A9\uB418\uB294 \uC6F9 \uC5B8\uC5B4: <a href=\\\"/ko/docs/HTML\\\">HTML</a>, <a href=\\\"/ko/docs/SVG\\\">SVG</a>, <a href=\\\"/ko/docs/XHTML\\\">XHTML</a>\uACFC <a class=\\\"new\\\" href=\\\"/ko/docs/XML\\\" rel=\\\"nofollow\\\">XML</a>.</li>\\n <li>CSS\uB97C \uAD11\uBC94\uC704\uD558\uAC8C \uC0AC\uC6A9\uD558\uB294 Mozilla \uAE30\uC220: <a href=\\\"/ko/docs/XUL\\\">XUL</a>, <a href=\\\"/ko/Firefox\\\">Firefox</a>, <a class=\\\"new\\\" href=\\\"/ko/docs/Mozilla/Thunderbird\\\" rel=\\\"nofollow\\\">Thunderbird</a> <a href=\\\"/ko/docs/Extensions\\\">\uD655\uC7A5\uAE30\uB2A5</a>\uACFC <a href=\\\"/ko/Add-ons/Themes\\\">\uD14C\uB9C8</a>.</li>\\n</ul>\",\"quickLinksHTML\":\"<ol><li><strong><a href=\\\"/ko/docs/Web/CSS\\\">CSS</a></strong></li><li><strong><a href=\\\"/ko/docs/Web/CSS/Reference\\\">CSS Reference</a></strong></li></ol>\",\"tocHTML\":\"\",\"raw\":\"<div>{{CSSRef}}</div>\\n\\n<p><span class=\\\"seoSummary\\\"><strong>Cascading Style Sheets</strong>(<strong>CSS</strong>)\uB294 <a href=\\\"/ko/docs/HTML\\\" title=\\\"HyperText Markup Language\\\">HTML</a>\uC774\uB098 <a href=\\\"/ko/docs/XML\\\">XML</a>(<a href=\\\"/ko/docs/SVG\\\">SVG</a>, <a href=\\\"/ko/docs/XHTML\\\">XHTML</a> \uAC19\uC740 XML \uBC29\uC5B8(dialect) \uD3EC\uD568)\uB85C \uC791\uC131\uB41C \uBB38\uC11C\uC758 \uD45C\uD604\uC744 \uAE30\uC220\uD558\uAE30 \uC704\uD574 \uC4F0\uC774\uB294 <a href=\\\"/ko/docs/Web/API/StyleSheet\\\">\uC2A4\uD0C0\uC77C\uC2DC\uD2B8</a> \uC5B8\uC5B4\uC785\uB2C8\uB2E4.</span> CSS\uB294 \uC694\uC18C\uAC00 \uD654\uBA74, \uC885\uC774, \uC74C\uC131\uC774\uB098 \uB2E4\uB978 \uB9E4\uCCB4 \uC0C1\uC5D0 \uC5B4\uB5BB\uAC8C \uB80C\uB354\uB9C1\uB418\uC5B4\uC57C \uD558\uB294\uC9C0 \uAE30\uC220\uD569\uB2C8\uB2E4.</p>\\n\\n<p>CSS\uB294 <strong><em>\uC624\uD508 \uC6F9</em></strong>\uC758 \uD575\uC2EC \uC5B8\uC5B4 \uC911 \uD558\uB098\uC774\uBA70 \uC5EC\uB7EC \uBE0C\uB77C\uC6B0\uC800\uAC00 \uD45C\uC900\uC73C\uB85C \uC0AC\uC6A9\uD558\uB294 <a class=\\\"external\\\" href=\\\"http://w3.org/Style/CSS/#specs\\\">W3C \uBA85\uC138</a>\uAC00 \uC788\uC2B5\uB2C8\uB2E4. \uB808\uBCA8 \uB2E8\uC704\uB85C \uAC1C\uBC1C\uD55C CSS1\uC740 \uB354 \uC774\uC0C1 \uC0AC\uC6A9\uD558\uC9C0 \uC54A\uACE0, \uB2E4\uC74C \uB808\uBCA8\uC778 CSS2.1\uC740 \uAD8C\uACE0\uC548(recommendation)\uC785\uB2C8\uB2E4. \uB354 \uC791\uC740 \uBAA8\uB4C8\uB85C \uB098\uB208 <a href=\\\"/ko/docs/Web/CSS/CSS3\\\" title=\\\"CSS3\\\">CSS3</a>\uC740 \uD45C\uC900\uD654 \uACFC\uC815\uC744 \uBC1F\uACE0 \uC788\uC2B5\uB2C8\uB2E4.</p>\\n\\n<section id=\\\"sect1\\\">\\n<ul class=\\\"card-grid\\\">\\n <li><span>CSS \uC18C\uAC1C</span>\\n\\n  <p>\uC6F9 \uAC1C\uBC1C\uC744 \uCC98\uC74C \uD558\uC2E0\uB2E4\uBA74 <a href=\\\"/ko/docs/Learn/Getting_started_with_the_web/CSS_\uAE30\uBCF8\\\">CSS \uAE30\uBCF8</a> \uBB38\uC11C\uB97C \uC77D\uC5B4 CSS\uAC00 \uBB34\uC5C7\uC778\uC9C0\uC640 \uC0AC\uC6A9\uBC95\uC744 \uBC30\uC6CC\uBCF4\uC138\uC694.</p>\\n </li>\\n <li><span>CSS \uC790\uC2B5\uC11C</span>\\n  <p>\uC2DC\uC791\uD558\uB294 \uC644\uC804\uD55C \uCD08\uBCF4\uC790\uB97C \uB3D5\uB294 <a href=\\\"/ko/docs/CSS/Getting_Started\\\" title=\\\"Getting Started\\\">\uB2E8\uACC4\uBCC4 \uC785\uBB38\uC11C</a>. \uD544\uC694\uD55C \uAE30\uCD08\uB97C \uBAA8\uB450 \uC81C\uACF5\uD569\uB2C8\uB2E4.</p>\\n </li>\\n <li><span>CSS \uCC38\uACE0\uC11C</span>\\n  <p>\uC219\uB828\uB41C \uAC1C\uBC1C\uC790\uB97C \uC704\uD55C <a href=\\\"/ko/docs/Web/CSS/Reference\\\">\uC804\uCCB4 CSS \uCC38\uACE0\uC11C</a>\uB294 CSS\uC758 \uBAA8\uB4E0 \uC18D\uC131\uACFC \uAC1C\uB150\uC744 \uC124\uBA85\uD569\uB2C8\uB2E4.</p>\\n </li>\\n</ul>\\n\\n<div class=\\\"row topicpage-table\\\">\\n<div class=\\\"section\\\">\\n<h2 class=\\\"Documentation\\\" id=\\\"\uC790\uC2B5\uC11C\\\">\uC790\uC2B5\uC11C</h2>\\n\\n<dl>\\n <dt><a href=\\\"/ko/docs/Learn/CSS/Introduction_to_CSS\\\">CSS \uC18C\uAC1C</a></dt>\\n <dd>\uC120\uD0DD\uC790, \uC18D\uC131, \uADDC\uCE59 \uC791\uC131, HTML\uC5D0 CSS \uC801\uC6A9\uD558\uAE30, \uAE38\uC774\uC640 \uC0C9 \uB4F1 \uB2E8\uC704 \uC9C0\uC815\uD558\uAE30, \uC885\uC18D\uACFC \uC0C1\uC18D, \uBC15\uC2A4 \uBAA8\uB378, \uB514\uBC84\uAE45 \uB4F1 CSS\uC758 \uC791\uB3D9 \uC6D0\uB9AC\uC640 \uAE30\uBCF8\uC744 \uBC30\uC6C1\uB2C8\uB2E4.</dd>\\n <dt><a href=\\\"/ko/docs/Learn/CSS/Styling_text\\\">\uD14D\uC2A4\uD2B8 \uAFB8\uBBF8\uAE30</a></dt>\\n <dd>\uAE00\uAF34, \uAD75\uAE30, \uAE30\uC6B8\uC774\uAE30, \uC904 \uAC04\uACA9\uACFC \uAE00\uC790 \uAC04\uACA9, \uADF8\uB9BC\uC790 \uB4F1 \uD14D\uC2A4\uD2B8 \uC2A4\uD0C0\uC77C\uC758 \uAE30\uCD08\uB97C \uB17C\uD569\uB2C8\uB2E4. \uC0AC\uC6A9\uC790 \uC124\uC815 \uAE00\uAF34 \uC801\uC6A9, \uBAA9\uB85D\uACFC \uB9C1\uD06C \uAFB8\uBBF8\uAE30\uB85C \uB9C8\uBB34\uB9AC\uD569\uB2C8\uB2E4.</dd>\\n <dt><a href=\\\"/ko/docs/Learn/CSS/Styling_boxes\\\">\uBC15\uC2A4 \uAFB8\uBBF8\uAE30</a></dt>\\n <dd>\uC6F9 \uD398\uC774\uC9C0 \uB808\uC774\uC544\uC6C3\uC758 \uAE30\uCD08 \uC911 \uD558\uB098\uC778 \uBC15\uC2A4 \uC2A4\uD0C0\uC77C\uC744 \uC0B4\uD3B4\uBD05\uB2C8\uB2E4. \uBC15\uC2A4 \uBAA8\uB378\uC5D0 \uB300\uD574 \uBCF5\uC2B5\uD558\uACE0, \uB9C8\uC9C4, \uD14C\uB450\uB9AC, \uD328\uB529, \uBC30\uACBD\uC0C9, \uC774\uBBF8\uC9C0, \uADF8\uB9BC\uC790, \uD544\uD130 \uB4F1 \uBC15\uC2A4 \uB808\uC774\uC544\uC6C3\uC744 \uC870\uC808\uD558\uB294 \uBC95\uC744 \uBC30\uC6C1\uB2C8\uB2E4.</dd>\\n <dt><a href=\\\"/ko/docs/Learn/CSS/CSS_layout\\\">CSS \uB808\uC774\uC544\uC6C3</a></dt>\\n <dd>\uD14D\uC2A4\uD2B8\uB97C \uAFB8\uBBF8\uACE0 \uBC15\uC2A4\uB97C \uBCC0\uD615\uD558\uB294 \uB4F1 CSS \uAE30\uCD08\uB97C \uC0B4\uD3B4\uBCF4\uC558\uC73C\uB2C8, \uC774\uC81C \uD654\uBA74\uC774\uB098 \uC11C\uB85C\uC5D0\uAC8C \uC0C1\uB300\uC801\uC778 \uC704\uCE58\uC5D0 \uC62C\uBC14\uB974\uAC8C \uBC30\uCE58\uD558\uB294 \uBC95\uC744 \uBC30\uC6C1\uB2C8\uB2E4. \uD544\uC694\uD55C \uC804\uC81C\uC870\uAC74\uC740 \uB2E4\uB8E8\uC5C8\uC73C\uB2C8 \uAC01\uAE30 \uB2E4\uB978 \uB514\uC2A4\uD50C\uB808\uC774 \uC124\uC815, \uD50C\uB85C\uD305\uACFC \uD3EC\uC9C0\uC158\uC744 \uC0AC\uC6A9\uD558\uB294 \uC804\uD1B5\uC801\uC778 \uB808\uC774\uC544\uC6C3\uBC95 \uBC0F \uD50C\uB809\uC2A4\uBC15\uC2A4 \uB4F1 \uC0C8\uB85C\uC6B4 \uBC29\uBC95 \uB4F1 \uB354 \uAE4A\uC740 \uC601\uC5ED\uC744 \uBC30\uC6C1\uB2C8\uB2E4.</dd>\\n</dl>\\n</div>\\n\\n<div class=\\\"section\\\">\\n<h2 id=\\\"\uCC38\uACE0\uC11C\\\">\uCC38\uACE0\uC11C</h2>\\n\\n<ul>\\n <li><a href=\\\"/ko/docs/Web/CSS/Reference\\\">CSS \uCC38\uACE0\uC11C</a>: \uC219\uB828\uB41C \uC6F9 \uAC1C\uBC1C\uC790\uB97C \uC704\uD574 CSS\uC758 \uBAA8\uB4E0 \uC18D\uC131\uACFC \uAC1C\uB150\uC744 \uC124\uBA85\uD569\uB2C8\uB2E4.</li>\\n <li>CSS \uD575\uC2EC \uAC1C\uB150\\n  <ul>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Syntax\\\">\uC5B8\uC5B4 \uAD6C\uBB38\uACFC \uD615\uD0DC</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Specificity\\\">\uBA85\uC2DC\uB3C4</a>, <a href=\\\"/ko/docs/Web/CSS/inheritance\\\">\uC0C1\uC18D</a>, <a href=\\\"/ko/docs/Web/CSS/Cascade\\\">\uC885\uC18D</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/CSS_Values_and_Units\\\">CSS \uB2E8\uC704\uC640 \uAC12</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model\\\">\uBC15\uC2A4 \uBAA8\uB378</a>\uACFC <a href=\\\"/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing\\\">\uC5EC\uBC31 \uC0C1\uC1C4</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/All_About_The_Containing_Block\\\">\uCEE8\uD14C\uC774\uB2DD \uBE14\uB85D</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Understanding_z-index/The_stacking_context\\\">\uC313\uC784 \uB9E5\uB77D</a>\uACFC <a href=\\\"/ko/docs/Web/Guide/CSS/Block_formatting_context\\\">\uBE14\uB85D \uC11C\uC2DD \uB9E5\uB77D</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/initial_value\\\">\uCD08\uAE30\uAC12</a>, <a href=\\\"/ko/docs/Web/CSS/computed_value\\\">\uACC4\uC0B0\uAC12</a>, <a href=\\\"/ko/docs/Web/CSS/used_value\\\">\uC0AC\uC6A9\uAC12</a>, <a href=\\\"/ko/docs/Web/CSS/actual_value\\\">\uC2E4\uC81C\uAC12</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Shorthand_properties\\\">CSS \uB2E8\uCD95 \uC18D\uC131</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/CSS_Flexible_Box_Layout\\\">CSS \uD50C\uB809\uC2A4 \uBC15\uC2A4 \uB808\uC774\uC544\uC6C3</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/CSS_Grid_Layout\\\">CSS \uADF8\uB9AC\uB4DC \uB808\uC774\uC544\uC6C3</a></li>\\n   <li><a href=\\\"/ko/docs/Web/CSS/Media_Queries\\\">\uBBF8\uB514\uC5B4 \uCFFC\uB9AC</a></li>\\n  </ul>\\n </li>\\n</ul>\\n\\n<h2 id=\\\"\uCFE1\uBD81\\\">\uCFE1\uBD81</h2>\\n\\n<p><a href=\\\"/ko/docs/Web/CSS/Layout_cookbook\\\">CSS \uB808\uC774\uC544\uC6C3 \uCFE1\uBD81</a>\uC740 \uC5EC\uB7EC\uBD84\uC758 \uC6F9\uC0AC\uC774\uD2B8\uC5D0\uC11C\uB3C4 \uAD6C\uD604\uD574\uC57C \uD560 \uC218 \uC788\uB294, \uD754\uD788 \uC4F0\uC774\uB294 \uB808\uC774\uC544\uC6C3 \uD328\uD134\uC744 \uBAA8\uC544\uB193\uC740 \uBB38\uC11C\uC785\uB2C8\uB2E4. \uD504\uB85C\uC81D\uD2B8\uC758 \uC2DC\uC791 \uCF54\uB4DC\uB294 \uBB3C\uB860\uC774\uACE0, \uB808\uC774\uC544\uC6C3 \uBA85\uC138\uB97C \uC0AC\uC6A9\uD558\uB294 \uAC01\uAE30 \uB2E4\uB978 \uBC29\uBC95\uACFC \uAC1C\uBC1C\uC790\uB85C\uC11C \uACE0\uB97C \uC218 \uC788\uB294 \uC120\uD0DD\uC9C0\uB97C \uC81C\uACF5\uD569\uB2C8\uB2E4.</p>\\n\\n<h2 class=\\\"Tools\\\" id=\\\"CSS_\uAC1C\uBC1C_\uB3C4\uAD6C\\\">CSS \uAC1C\uBC1C \uB3C4\uAD6C</h2>\\n\\n<ul>\\n <li>CSS\uAC00 \uC720\uD6A8\uD55C\uC9C0 \uAC80\uC0AC\uD558\uB294 <a class=\\\"external\\\" href=\\\"http://jigsaw.w3.org/css-validator/\\\">W3C CSS Validation \uC11C\uBE44\uC2A4</a>. <a href=\\\"http://www.onlinewebcheck.com/\\\">OnlineWebCheck.com</a> \uB610\uD55C \uAC19\uC740 \uC11C\uBE44\uC2A4\uC785\uB2C8\uB2E4. \uC774\uB4E4\uC740 \uB9E4\uC6B0 \uC720\uC6A9\uD55C \uB514\uBC84\uAE45 \uB3C4\uAD6C\uC785\uB2C8\uB2E4.</li>\\n <li><a href=\\\"/ko/docs/Tools\\\">Firefox \uAC1C\uBC1C\uC790 \uB3C4\uAD6C</a>\uB294 <a href=\\\"/ko/docs/Tools/Page_Inspector\\\">\uAC80\uC0AC\uAE30</a>\uC640 <a href=\\\"/ko/docs/Tools/Style_Editor\\\">\uC2A4\uD0C0\uC77C \uD3B8\uC9D1\uAE30</a> \uB3C4\uAD6C\uB97C \uD1B5\uD574 \uD398\uC774\uC9C0\uC758 \uC2E4\uC2DC\uAC04 CSS \uBCF4\uAE30\uC640 \uD3B8\uC9D1\uC744 \uD5C8\uC6A9\uD569\uB2C8\uB2E4.</li>\\n <li>Firefox \uC804\uC6A9 <a href=\\\"https://addons.mozilla.org/en-US/firefox/addon/web-developer/\\\">\uC6F9 \uAC1C\uBC1C\uC790 \uD655\uC7A5</a>\uB3C4 \uD2B9\uC815 \uC0AC\uC774\uD2B8\uB97C \uC8FC\uC2DC\uD574 CSS\uB97C \uCD94\uC801\uD558\uACE0 \uC2E4\uC2DC\uAC04 \uD3B8\uC9D1\uC744 \uAC00\uB2A5\uCF00 \uD569\uB2C8\uB2E4.</li>\\n <li><a href=\\\"/ko/docs/Web/CSS/Tools\\\">\uAE30\uD0C0 CSS \uB3C4\uAD6C.</a></li>\\n</ul>\\n</div>\\n</div>\\n</section>\\n\\n<h2 id=\\\"\uAC19\uC774_\uBCF4\uAE30\\\">\uAC19\uC774 \uBCF4\uAE30</h2>\\n\\n<ul>\\n <li><a href=\\\"/ko/docs/Web/Demos_of_open_web_technologies#CSS\\\">CSS \uB370\uBAA8</a>: \uCD5C\uC2E0 CSS \uAE30\uC220\uC744 \uC0AC\uC6A9\uD55C \uB370\uBAA8\uB97C \uD0D0\uC0C9\uD558\uBA70 \uC601\uAC10\uC744 \uC5BB\uC5B4\uBCF4\uC138\uC694.</li>\\n <li>CSS\uAC00 \uD754\uD788 \uC801\uC6A9\uB418\uB294 \uC6F9 \uC5B8\uC5B4: <a href=\\\"/ko/docs/HTML\\\">HTML</a>, <a href=\\\"/ko/docs/SVG\\\">SVG</a>, <a href=\\\"/ko/docs/XHTML\\\">XHTML</a>\uACFC <a href=\\\"/ko/docs/XML\\\">XML</a>.</li>\\n <li>CSS\uB97C \uAD11\uBC94\uC704\uD558\uAC8C \uC0AC\uC6A9\uD558\uB294 Mozilla \uAE30\uC220: <a href=\\\"/ko/docs/XUL\\\">XUL</a>, <a href=\\\"/ko/Firefox\\\">Firefox</a>, <a href=\\\"/ko/docs/Mozilla/Thunderbird\\\">Thunderbird</a> <a href=\\\"/ko/docs/Extensions\\\">\uD655\uC7A5\uAE30\uB2A5</a>\uACFC <a href=\\\"/ko/Add-ons/Themes\\\">\uD14C\uB9C8</a>.</li>\\n</ul>\",\"parents\":[{\"url\":\"/ko/docs/Web\",\"title\":\"\uAC1C\uBC1C\uC790\uB97C \uC704\uD55C \uC6F9 \uAE30\uC220\"}],\"translations\":[{\"language\":\"English (US)\",\"hrefLang\":\"en\",\"localizedLanguage\":\"\uC601\uC5B4 (\uBBF8\uAD6D)\",\"locale\":\"en-US\",\"url\":\"/en-US/docs/Web/CSS\",\"title\":\"CSS: Cascading Style Sheets\"},{\"language\":\"\u0639\u0631\u0628\u064A\",\"hrefLang\":\"ar\",\"localizedLanguage\":\"\uC544\uB78D\uC5B4\",\"locale\":\"ar\",\"url\":\"/ar/docs/Web/CSS\",\"title\":\"\u0635\u0641\u062D\u0627\u062A \u0627\u0644\u0623\u0646\u0645\u0627\u0637 \u0627\u0644\u0627\u0646\u0633\u064A\u0627\u0628\u064A\u0629\"},{\"language\":\"\u0411\u044A\u043B\u0433\u0430\u0440\u0441\u043A\u0438\",\"hrefLang\":\"bg\",\"localizedLanguage\":\"\uBD88\uAC00\uB9AC\uC544\uC5B4\",\"locale\":\"bg\",\"url\":\"/bg/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"\u09AC\u09BE\u0982\u09B2\u09BE\",\"hrefLang\":\"bn\",\"localizedLanguage\":\"\uBC29\uAE00\uB77C\uB370\uC2DC\uC5B4\",\"locale\":\"bn\",\"url\":\"/bn/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"Catal\u00E0\",\"hrefLang\":\"ca\",\"localizedLanguage\":\"\uCE74\uD0C8\uB85C\uB2C8\uC544\uC5B4\",\"locale\":\"ca\",\"url\":\"/ca/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"Deutsch\",\"hrefLang\":\"de\",\"localizedLanguage\":\"\uB3C5\uC77C\uC5B4\",\"locale\":\"de\",\"url\":\"/de/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"\u0395\u03BB\u03BB\u03B7\u03BD\u03B9\u03BA\u03AC\",\"hrefLang\":\"el\",\"localizedLanguage\":\"\uADF8\uB9AC\uC2A4\uC5B4\",\"locale\":\"el\",\"url\":\"/el/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"Espa\u00F1ol\",\"hrefLang\":\"es\",\"localizedLanguage\":\"\uC2A4\uD398\uC778\uC5B4\",\"locale\":\"es\",\"url\":\"/es/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"\u0641\u0627\u0631\u0633\u06CC\",\"hrefLang\":\"fa\",\"localizedLanguage\":\"\uD398\uB974\uC2DC\uC544\uC5B4\",\"locale\":\"fa\",\"url\":\"/fa/docs/Web/CSS\",\"title\":\"CSS: \u0634\u06CC\u0648\u0647\u200C\u0646\u0627\u0645\u0647\u200C\u0647\u0627\u06CC \u0622\u0628\u0634\u0627\u0631\u06CC\"},{\"language\":\"Fran\u00E7ais\",\"hrefLang\":\"fr\",\"localizedLanguage\":\"\uD504\uB791\uC2A4\uC5B4\",\"locale\":\"fr\",\"url\":\"/fr/docs/Web/CSS\",\"title\":\"CSS : Feuilles de style en cascade\"},{\"language\":\"\u05E2\u05D1\u05E8\u05D9\u05EA\",\"hrefLang\":\"he\",\"localizedLanguage\":\"\uD788\uBE0C\uB9AC\uC5B4\",\"locale\":\"he\",\"url\":\"/he/docs/Web/CSS\",\"title\":\"CSS: \u05D2\u05D9\u05DC\u05D9\u05D5\u05E0\u05D5\u05EA \u05E1\u05D2\u05E0\u05D5\u05DF \u05DE\u05D3\u05D5\u05E8\u05D2\u05D9\u05DD\"},{\"language\":\"magyar\",\"hrefLang\":\"hu\",\"localizedLanguage\":\"\uD5DD\uAC00\uB9AC\uC5B4\",\"locale\":\"hu\",\"url\":\"/hu/docs/CSS\",\"title\":\"CSS\"},{\"language\":\"Bahasa Indonesia\",\"hrefLang\":\"id\",\"localizedLanguage\":\"\uC778\uB3C4\uB124\uC2DC\uC544\uC5B4\",\"locale\":\"id\",\"url\":\"/id/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"Italiano\",\"hrefLang\":\"it\",\"localizedLanguage\":\"\uC774\uD0C8\uB9AC\uC544\uC5B4\",\"locale\":\"it\",\"url\":\"/it/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"\u65E5\u672C\u8A9E\",\"hrefLang\":\"ja\",\"localizedLanguage\":\"\uC77C\uBCF8\uC5B4\",\"locale\":\"ja\",\"url\":\"/ja/docs/Web/CSS\",\"title\":\"CSS: \u30AB\u30B9\u30B1\u30FC\u30C7\u30A3\u30F3\u30B0\u30B9\u30BF\u30A4\u30EB\u30B7\u30FC\u30C8\"},{\"language\":\"Taqbaylit\",\"hrefLang\":\"kab\",\"localizedLanguage\":\"\uCE74\uBE4C\uC5B4\",\"locale\":\"kab\",\"url\":\"/kab/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"\u1019\u103C\u1014\u103A\u1019\u102C\u1018\u102C\u101E\u102C\",\"hrefLang\":\"my\",\"localizedLanguage\":\"\uBC84\uB9C8\uC5B4\",\"locale\":\"my\",\"url\":\"/my/docs/Web/CSS\",\"title\":\"CSS: Cascading Style Sheets\"},{\"language\":\"Nederlands\",\"hrefLang\":\"nl\",\"localizedLanguage\":\"\uB124\uB378\uB780\uB4DC\uC5B4\",\"locale\":\"nl\",\"url\":\"/nl/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"Polski\",\"hrefLang\":\"pl\",\"localizedLanguage\":\"\uD3F4\uB780\uB4DC\uC5B4\",\"locale\":\"pl\",\"url\":\"/pl/docs/Web/CSS\",\"title\":\"CSS: Kaskadowe arkusze styl\u00F3w\"},{\"language\":\"Portugu\u00EAs (do\u00A0Brasil)\",\"hrefLang\":\"pt-BR\",\"localizedLanguage\":\"\uD3EC\uB974\uD22C\uAC08\uC5B4 (\uBE0C\uB77C\uC9C8)\",\"locale\":\"pt-BR\",\"url\":\"/pt-BR/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"Portugu\u00EAs (Europeu)\",\"hrefLang\":\"pt\",\"localizedLanguage\":\"\uD3EC\uB974\uD22C\uAC08\uC5B4 (\uD3EC\uB974\uD22C\uAC08)\",\"locale\":\"pt-PT\",\"url\":\"/pt-PT/docs/Web/CSS\",\"title\":\"CSS: Folhas de Estilo em Cascata\"},{\"language\":\"\u0420\u0443\u0441\u0441\u043A\u0438\u0439\",\"hrefLang\":\"ru\",\"localizedLanguage\":\"\uB7EC\uC2DC\uC544\uC5B4\",\"locale\":\"ru\",\"url\":\"/ru/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"\u0E44\u0E17\u0E22\",\"hrefLang\":\"th\",\"localizedLanguage\":\"\uD0DC\uAD6D\uC5B4\",\"locale\":\"th\",\"url\":\"/th/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"T\u00FCrk\u00E7e\",\"hrefLang\":\"tr\",\"localizedLanguage\":\"\uD130\uD0A4\uC5B4\",\"locale\":\"tr\",\"url\":\"/tr/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430\",\"hrefLang\":\"uk\",\"localizedLanguage\":\"\uC6B0\uD06C\uB77C\uC774\uB098\uC5B4\",\"locale\":\"uk\",\"url\":\"/uk/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"Ti\u1EBFng Vi\u1EC7t\",\"hrefLang\":\"vi\",\"localizedLanguage\":\"\uBCA0\uD2B8\uB0A8\uC5B4\",\"locale\":\"vi\",\"url\":\"/vi/docs/Web/CSS\",\"title\":\"CSS\"},{\"language\":\"\u4E2D\u6587 (\u7B80\u4F53)\",\"hrefLang\":\"zh\",\"localizedLanguage\":\"\uC911\uAD6D\uC5B4 (\uAC04\uCCB4)\",\"locale\":\"zh-CN\",\"url\":\"/zh-CN/docs/Web/CSS\",\"title\":\"CSS\uFF08\u5C42\u53E0\u6837\u5F0F\u8868\uFF09\"},{\"language\":\"\u6B63\u9AD4\u4E2D\u6587 (\u7E41\u9AD4)\",\"hrefLang\":\"zh-TW\",\"localizedLanguage\":\"\uC911\uAD6D\uC5B4 (\uBC88\uCCB4)\",\"locale\":\"zh-TW\",\"url\":\"/zh-TW/docs/Web/CSS\",\"title\":\"CSS\"}],\"lastModified\":\"2019-09-10T23:37:54.081105\"}}");</script>
-
-
-  <!-- site js -->
-  <script defer type="text/javascript" src="/static/build/js/react-main.3608eae72453.js" charset="utf-8"></script>
-  <script>
-    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
-  </script>
-
-  
-    <script defer type="text/javascript" src="/static/build/js/react-bcd-signal.089b16e429d6.js" charset="utf-8"></script>
-  
-</body>
+<div class="container">
+<div>
+              <label class="mobile_menu" for="mobile_menu">
+              <span>Menu</span>
+              </label>
+              <input id="mobile_menu" type="checkbox">
+              <ul class="nav">
+              <li><a href="#"><i class="icon-home icon-large"></i></a></li>
+             
+             
+            <!----- Full Drop Down Name ----> 
+              <li class="dropdown"><a href="#">blueb.co.kr</a>     
+            <!----- Full Drop Down Name Ends Here ---->     
+                         
+            <!----- Full Drop Down Contents  Starts Here---->     
+                  
+              <div class="fulldrop">              
+                <div class="column">
+                  <h3>menu1</h3>
+                  <ul>
+                    <li><a href="#">Tech ANd All</a></li>
+                    <li><a href="#">Web Designs</a></li>
+                    <li><a href="#">PSD</a></li>
+                    <li><a href="#">Scripts</a></li>
+                  </ul>
+                </div>
+                
+                
+                
+                <div class="column">
+                        <h3>Menu Header</h3>
+                  <ul>
+                    <li><a href="#">Tech ANd All</a></li>
+                    <li><a href="#">Web Designs</a></li>
+                    <li><a href="#">PSD</a></li>
+                    <li><a href="#">Scripts</a></li>
+                  </ul>
+                </div>
+                
+                
+                <div class="column">
+                         <h3>Menu Header</h3>
+                  <ul>
+                    <li><a href="#">Tech ANd All</a></li>
+                    <li><a href="#">Web Designs</a></li>
+                    <li><a href="#">PSD</a></li>
+                    <li><a href="#">Scripts</a></li>
+                  </ul>
+                </div>
+                
+                
+                <div class="column">
+                         <h3>Menu Header</h3>
+                  <ul>
+                    <li><a href="#">Tech ANd All</a></li>
+                    <li><a href="#">Web Designs</a></li>
+                    <li><a href="#">PSD</a></li>
+                    <li><a href="#">Scripts</a></li>
+                  </ul>
+                </div>
+                
+                
+                <div class="column">
+                         <h3>Menu Header</h3>
+                  <ul>
+                    <li><a href="#">Tech ANd All</a></li>
+                    <li><a href="#">Web Designs</a></li>
+                    <li><a href="#">PSD</a></li>
+                    <li><a href="#">Scripts</a></li>
+                  </ul>
+                </div>
+                
+                
+                <div class="column">
+                         <h3>Menu Header</h3>
+                  <ul>
+                    <li><a href="#">Tech ANd All</a></li>
+                    <li><a href="#">Web Designs</a></li>
+                    <li><a href="#">PSD</a></li>
+                    <li><a href="#">Scripts</a></li>
+                  </ul>
+                </div>
+              </div>
+              </li>
+              <!----- Full Drop Down Contents  Ends  Here---->   
+              
+              
+              
+              
+              
+              
+              
+              
+                        <!----- Full Drop Down Name ----> 
+              <li class="dropdown"><a href="#">Drop Down Menu 2</a>     
+            <!----- Full Drop Down Name Ends Here ---->     
+                         
+            <!----- Full Drop Down Contents  Starts Here---->     
+                  
+              <div class="fulldrop">              
+                <div class="column">
+				menu2
+				</div>
+              </li>
+              <!----- Full Drop Down Contents  Ends  Here---->   
+              
+              
+          
+        <!----- Regular Menu Button ---->   
+          <li><a href="#">  Web Designs</a></li>
+        <!----- Regular Menu Button Ends---->  
+           
+         
+          <!----- Regular Menu Button ---->  
+               <li><a href="#"> LifeStyle</a></li>
+          <!----- Regular Menu Button Ends---->  
+          
+              
+          <!----- Regular Menu Button ---->  
+               <li><a href="#"> About</a></li>
+          <!----- Regular Menu Button Ends---->  
+      
+                <!----- Regular Menu Button ---->  
+               <li><a href="#"> Contact</a></li>
+          <!----- Regular Menu Button Ends---->  
+                
+           
+          
+           <!----- Search Form Starts---->        
+              <li class="search"><form action="Search.php">
+                  <i class="icon-search icon-large"></i><input type="text">
+                  </form>
+              </li>              
+          <!----- Search Form Ends ---->    
+             
+                 
+          </ul> 
+        </div>
+      </div>
+    </body>
 </html>
