@@ -7,7 +7,7 @@
       body, html { height: 76.5%; }
       
       body {
-        color: #fff;
+        color: rgb(88, 77, 77);
         margin: 0 auto;
         position: relative;
       }
@@ -21,13 +21,7 @@
         text-align: center;
         background-image: url("images/sherlock2.jfif");
       }
-      h1 {
-        margin: 40px 0;
-        font-size: 40px;
-        line-height: 40px;
-        font-weight: bold;
-        text-shadow: 0px 1px 1px #888;
-      }
+      
       a {
         text-decoration: none;
         color: #fff;  
@@ -64,7 +58,7 @@
         width: 200px;
         line-height: 50px;
         padding: 0 30px;
-      
+      /*가장자리 동글동글*/
         border-radius: 50px;
         -moz-border-radius: 50px;
         -webkit-border-radius: 50px;  
@@ -73,20 +67,20 @@
         -webkit-transition: .5s;
       
         border: 2px solid  #bec7c7;
-      }
+        }
         .btn-slide:hover {
           background-color:  #bec7c7;
         }
-          .btn-slide:hover span.circle {
+        .btn-slide:hover span.circle {
             left: 100%;
             margin-left: -45px;
             background-color:  #bec7c7;
           }
-          .btn-slide:hover span.title {
+        .btn-slide:hover span.title {
             left: 40px;
             opacity: 0;
           }
-          .btn-slide:hover span.title-hover {
+        .btn-slide:hover span.title-hover {
             opacity: 1;
             left: 40px;
           }
@@ -123,21 +117,52 @@
           left: 80px; 
           opacity: 0;
         }
+        
+        /*스크롤바*/
+        ::-webkit-scrollbar{width: 16px;}
+        ::-webkit-scrollbar-track {background-color:rgb(39, 37, 37) ;}
+        ::-webkit-scrollbar-thumb {background-color:#4de6b8;border-radius: 10px;}
+        ::-webkit-scrollbar-thumb:hover {background: #555;}
+        ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+        width:16px;height:16px;background:#4de6b8;} 
+
       </style>
       </head>
-      
-      <body>
+            <body>
+            
         <div class="container">
-         
-          
-          <a href="free_layout.html" class="btn-slide">
+                  <a href="free_layout.html" class="btn-slide">
             <span class="circle"><span class="icon-long-arrow-right "></span></span>
-            <span class="title">Slide to go to the Web </span>
+            <span class="title">Slide to go sherlock </span>
             <span class="title-hover"> Go to the sherlock!</span>
           </a>
-      
-      
-        </div>
-      
+               </div>
+
+        <div class="container" >
+                  <a href="layout1.html" class="btn-slide">
+                    <span class="circle"><span class="icon-long-arrow-right "></span></span>
+                    <span class="title">Slide to go layout_1 </span>
+                    <span class="title-hover"> Go to layout_1!</span>
+                  </a>
+                </div>
+
+         <div class="container" >
+                    <a href="layout2.html" class="btn-slide">
+                      <span class="circle"><span class="icon-long-arrow-right "></span></span>
+                      <span class="title">Slide to go layout_2 </span>
+                      <span class="title-hover"> Go to layout_2!</span>
+                    </a>       
+                 </div>  
+
+          <div class="container" >
+              <a href="layout3.html" class="btn-slide">
+                <span class="circle"><span class="icon-long-arrow-right "></span></span>
+                <span class="title">Slide to go layout_3 </span>
+                <span class="title-hover"> Go to layout_3!</span>
+              </a>       
+                 </div>  
+       
+        
+          
       </body>
       </html>

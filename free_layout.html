@@ -5,13 +5,19 @@
         <style type="text/css">
 
          a { text-decoration:none }
-         
+         ::-webkit-scrollbar{width: 16px;}
+         ::-webkit-scrollbar-track {background-color:rgb(39, 37, 37) ;}
+         ::-webkit-scrollbar-thumb {background-color:#4de6b8;border-radius: 10px;}
+         ::-webkit-scrollbar-thumb:hover {background: #555;}
+         ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+         width:16px;height:16px;background:#4de6b8;} 
         </style>
             
         <style>
-            a { text-decoration: none; color: black; }
+
+    a { text-decoration: none; color: black; }
     a:visited { text-decoration: none; }
-    a:hover { text-decoration: none; }
+    a:hover { text-decoration: none; } 
     a:focus { text-decoration: none; }
     a:hover, a:active { text-decoration: none; }
     .tistory
@@ -22,8 +28,13 @@
                 color: white;
                 padding: 20px 50px;
             }
+
+            body{
+                margin: 0;            }
+
+                
             nav>ul>li{
-                float: left;
+               
                 list-style: none;
                 padding-left: 50px;
                 padding-right: 100px;
@@ -58,11 +69,14 @@
                 padding-right: 10px;
                 border-right-style: groove;
             }
+            /*배경사진*/
+            header{
+                padding-bottom: 400px;
+            }
             #main_visual{
-                padding-top: 400px;
                 padding-bottom: 100px;
                 background-image:url("images/sherlock.jfif");
-                background-position: 30% 50%;
+                background-position: 40% 50%;
 
                 background-size: cover;
                 
@@ -126,15 +140,25 @@
                 max-width: 1920px;
                 margin: 0px auto; 
             }
+            .clear{
+                clear:both;
+                height: 0px;
+                overflow: hidden;
+            }
             
-                #png_center{
+            #png_center{
                     position: relative;
-                    left: 100px;
+                    left: 45px;
                     display: block;
                     margin-left: auto;
-                    margin-right: auto;
-                    
+                    margin-right: auto;     
                 }
+               
+
+                }
+                /*스크롤바*/
+        
+
 
              #tabsJ {
       float:left;
@@ -154,6 +178,7 @@
       display:inline;
       margin:20px;
       padding:0;
+      float: left;
       }
     #tabsJ a {
       float:left;     
@@ -171,7 +196,7 @@
     #tabsJ a span {float:none;}
     
     #tabsJ a:hover span {
-      color:rgb(244, 169, 247);
+      color:#4de6b8;
       }
     #tabsJ a:hover {
       background-position:0% -42px;
@@ -180,36 +205,37 @@
       background-position:100% -42px;
       }
                 /* 시도 */
+               
             
 
         </style>
     </head>
     <body>
-<div id="tabsJ">
-  <ul>
-    <li><a href="free_layout door.html" title="Link 1"><span> BACK </span></a></li>
-    <li><a href="#" title="Link 2"><span> ABOUT US </span></a></li>
-    <li><a href="#" title="Link 3"><span> TUTORIALS </span></a></li>
-    <li><a href="#" title="Longer Link Text"><span> DEMOS </span></a></li>
-    <li><a href="#" title="Link 5"><span> SHERLOCK </span></a></li>
-    <li><a href="#" title="Link 6"><span> WATSON </span></a></li>
-	<li><a href="#" title="Link 7"><span> NEWS </span></a></li>
-  </ul>
-</div>
         
-        
-        
+
         <div id="wrap">
-        <header>
+            <div id="main_visual">
+                <header>
+                    <div id="tabsJ">
+                        <ul>
+                            <li><a href="free_layout door.html" title="Link 1"><span> BACK </span></a></li>
+                            <li><a href="#" title="Link 2"><span> ABOUT US </span></a></li>
+                            <li><a href="#" title="Link 3"><span> TUTORIALS </span></a></li>
+                            <li><a href="#" title="Longer Link Text"><span> DEMOS </span></a></li>
+                            <li><a href="#" title="Link 5"><span> SHERLOCK </span></a></li>
+                            <li><a href="#" title="Link 6"><span> WATSON </span></a></li>
+                            <li><a href="#" title="Link 7"><span> NEWS </span></a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </header>
         
-        </header>
-        <div id="main_visual">
             <div>The name is Sherlock Holmes and the address is 221b Baker street.</div>
             <h2> THE GAME IS ON </h2>
             <div>I'm not a hero. I'm a high-functioning sociopath.</div>
             <div id="png_center">
             <a href="#">
-                <img src="images/셜록버튼.png">
+                <img src="images/셜록버튼2.png">
             </a>
         </div>
         </div>
@@ -224,8 +250,6 @@
                                   
                  <img src="images/셜록4.jpeg" >
                                 
-                                               
-           
            
     
     
