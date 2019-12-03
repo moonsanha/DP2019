@@ -1,20 +1,42 @@
 <html>
-    <head>
-        <title>free_layout</title>
-        <meta charset="utf-8">
-        <style type="text/css">
-
+<head>
+<title>free_layout</title>
+<meta charset="utf-8">
+<style type="text/css">
          a { text-decoration:none }
+         /*scroll bar*/
          ::-webkit-scrollbar{width: 16px;}
          ::-webkit-scrollbar-track {background-color:rgb(39, 37, 37) ;}
          ::-webkit-scrollbar-thumb {background-color:#4de6b8;border-radius: 10px;}
          ::-webkit-scrollbar-thumb:hover {background: #555;}
          ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
-         width:16px;height:16px;background:#4de6b8;} 
-        </style>
-            
-        <style>
-
+         width:16px;height:16px;background:#4de6b8;}
+</style>
+<style>
+       a {
+       font-family: 'Roboto Condensed', sans-serif;
+       font-size: 20px;
+       text-decoration: none;
+        }
+body{
+    background-color: #1d1c1c;
+}
+     .links {
+     *zoom: 1;
+     padding: 30px;
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     text-align: center;
+     background: #1d1c1c;
+   }
+   .links:before, .links:after {
+     content: "";
+     display: table;
+   }
+   .links:after {
+   clear: both;
+   }
     a { text-decoration: none; color: black; }
     a:visited { text-decoration: none; }
     a:hover { text-decoration: none; } 
@@ -22,19 +44,14 @@
     a:hover, a:active { text-decoration: none; }
     .tistory
     /*이것저것 해보다가 믿줄 자꾸 그어져서 일단 다집어넣어본것*/
-
             header{
                 background-color: #606969;
                 color: white;
                 padding: 20px 50px;
             }
-
             body{
                 margin: 0;            }
-
-                
             nav>ul>li{
-               
                 list-style: none;
                 padding-left: 50px;
                 padding-right: 100px;
@@ -47,8 +64,6 @@
             header>h1{
                 float: right;
                 margin: 0px;
-
-                
             }
             header>h4{
                 font: bold 14px Verdana, Arial, Helvetica, sans-serif;
@@ -77,11 +92,8 @@
                 padding-bottom: 100px;
                 background-image:url("images/sherlock.jfif");
                 background-position: 40% 50%;
-
                 background-size: cover;
-                
                 background-repeat: no-repeat;
-                
                 background-color: #000;
                 color: white;
                 text-align: center;
@@ -89,10 +101,6 @@
             #main_visual2{
                 width: 200px;
                 height: 100px;
-
-            
-
-
             }
             #main_visual h2{
                 margin: 0px;
@@ -115,7 +123,6 @@
                 margin-right: 0px;
                 margin-bottom: 50px;
                 margin-left: 0px;
-               
             }
             section>p{
                 margin: 80px 0px; 
@@ -131,10 +138,11 @@
                 width: calc(25% - (1px * 3 /4) - 30px - 30px);
                 list-style: none; 
                 border-right: solid 1px #ccc;
-               
                 padding: 30px;
             }
-            
+            #and_section>p{
+                color: rgb(255, 255, 255);
+            }
             #wrap{
                 min-width: 900px;
                 max-width: 1920px;
@@ -145,21 +153,14 @@
                 height: 0px;
                 overflow: hidden;
             }
-            
             #png_center{
                     position: relative;
                     left: 45px;
                     display: block;
                     margin-left: auto;
                     margin-right: auto;     
-                }
-               
-
-                }
-                /*스크롤바*/
-        
-
-
+                }          
+        /*새로운 메뉴 만들려고 삭제함*/
              #tabsJ {
       float:left;
       width:100%;      
@@ -169,106 +170,345 @@
       top: 40px;
       left: 300px;
       }
-    #tabsJ ul {
-	margin:0;
-	padding:30px 10px 0 0px;
-	list-style:none;
-      }
-    #tabsJ li {
-      display:inline;
-      margin:20px;
-      padding:0;
-      float: left;
-      }
-    #tabsJ a {
-      float:left;     
-      margin:0;
-      padding:0 0 0 5px;
-      text-decoration:none;
-      }
-    #tabsJ a span {
-      float:left;
-      display:block;
-      padding:5px 15px 4px 6px;
-      color:rgb(255, 255, 255);
-      }
-    
-    #tabsJ a span {float:none;}
-    
-    #tabsJ a:hover span {
-      color:#4de6b8;
-      }
-    #tabsJ a:hover {
-      background-position:0% -42px;
-      }
-    #tabsJ a:hover span {
-      background-position:100% -42px;
-      }
-                /* 시도 */
-               
-            
-
-        </style>
-    </head>
-    <body>
-            <div id="content">
-           
-                    <section class="links">
-                        <nav class="link-effect-13" id="link-effect-13">
-                            <a href="free_layout door.html"><span>BACK</span></a>
-                            <a href="#link-effect-13"><span>TUTORIALS</span></a>
-                            <a href="#link-effect-13"><span>SHERLOCK</span></a>
-                            <a href="#link-effect-13"><span>WATSON</span></a>
-                            <a href="#link-effect-13"><span>NEWS</span></a>
-                        </nav>
-                    </section>
-                    
-                   
-                </div>  
-
-        <div id="wrap">
-            <div id="main_visual">
-                <header>
-                    <div id="tabsJ">
-                        <ul>
-                            <li><a href="free_layout door.html" title="Link 1"><span> BACK </span></a></li>
-                            <li><a href="#" title="Link 2"><span> ABOUT US </span></a></li>
-                            <li><a href="#" title="Link 3"><span> TUTORIALS </span></a></li>
-                            <li><a href="#" title="Longer Link Text"><span> DEMOS </span></a></li>
-                            <li><a href="#" title="Link 5"><span> SHERLOCK </span></a></li>
-                            <li><a href="#" title="Link 6"><span> WATSON </span></a></li>
-                            <li><a href="#" title="Link 7"><span> NEWS </span></a></li>
-                            <div class="clear"></div>
-                        </ul>
-                    </div>
-                </header>
-        
-            <div>The name is Sherlock Holmes and the address is 221b Baker street.</div>
-            <h2> THE GAME IS ON </h2>
-            <div>I'm not a hero. I'm a high-functioning sociopath.</div>
-            <div id="png_center">
-            <a href="#">
-                <img src="images/셜록버튼2.png">
-            </a>
-        </div>
-        </div>
-        <hr />
-        <section id="and_section">
-            <h3> Sherlock and Watson </h3>
-            <hr />
-            <p>Co-created by Steven Moffat and Mark Gatiss,</br> 
-                Sherlock stars Benedict Cumberbatch as Sherlock Holmes and Martin Freeman as his loyal friend,</br>
-                 Doctor John Watson. Rupert Graves plays Inspector Lestrade.</p>
-                 <hr />
-                                  
-                 <img src="images/셜록4.jpeg" >
-                                
-           
-    
-    
-        </div>
-    </div>
-            </section>
-                
-    </body>
+        /* 새로운 메뉴바 시도 */
+.link-effect-13 a {
+  color: #797878;
+  margin: 0 20px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  -moz-transition: ease-out 0.3s 0.3s;
+  -o-transition: ease-out 0.3s 0.3s;
+  -webkit-transition: ease-out 0.3s;
+  -webkit-transition-delay: 0.3s;
+  transition: ease-out 0.3s 0.3s;
+}
+.link-effect-13 a span::before {
+  width: 100%;
+  height: 2px;
+  background: rgb(14, 209, 128);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-13 a span::after {
+  width: 100%;
+  height: 2px;
+  background: rgb(31, 224, 166);
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-13 a::before {
+  width: 2px;
+  height: 100%;
+  background:rgb(31, 224, 166);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-13 a::after {
+  width: 2px;
+  height: 100%;
+  background:rgb(31, 224, 166);
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-effect-13 a:hover {
+  color:rgb(31, 224, 166);
+}
+.link-effect-13 a:hover::before, .link-effect-13 a:hover::after {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.link-effect-13 a:hover span::before, .link-effect-13 a:hover span::after {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+/*아래 이미지 박스*/
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif,;
+}
+.container2{
+  padding: 2rem;
+}
+.gallery{
+  width: 100%;
+  max-width: 960px;
+  min-height: 100vh;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.gallery-item{
+  box-shadow: 2px 2px 8px -1px #555;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  background: #000;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.gallery-item-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+  z-index:20;
+  -webkit-transition:all .5s ease;
+  transition: all .5s ease;
+  bottom:0;
+  overflow: hidden;
+}
+.gallery-item:hover .gallery-item-image{
+  bottom: 80px;
+}
+.gallery-item-description{
+  color:rgb(7, 128, 97);
+  font-size: .8rem;
+  width: 100%;
+  height: 80px;
+  padding: .5rem .8rem;
+  background:#4de6b8;
+  position: absolute;
+  bottom:0;
+}
+/*2,3,5사진비율맞추기용*/
+.small{
+	width: 300px;
+	height:300px;
+}
+/*6*/
+.small2{
+	width: 300px;
+	height: 400px;
+}
+/*1,*/
+.small3{
+	width: 400px;
+	height: 300px;	
+}
+footer ul>li{
+                float: left; 
+                list-style: none; 
+                padding-left: 5px;
+                padding-right: 12px;
+            }
+            #footer_left{
+                float: left;
+            }
+            #i_list{
+                float: right;
+            }
+            footer{
+                background-color: #333;
+                color: #5e6160;
+                padding: 30px;
+            }
+            footer #n_list li{
+                position: relative;
+                left: 500px;
+                list-style: none; 
+                padding-left: 10px;
+                padding-right: 10px;
+                border-right: solid 1px rgb(38, 134, 94); 
+            }
+</style>
+</head>
+<body>
+<div id="content">
+	<section class="links">
+	<nav class="link-effect-13" id="link-effect-13">
+	<a href="free_layout door.html"><span>index</span></a>
+	<a href="layout1.html"><span>TUTORIALS1</span></a>
+	<a href="layout2.html"><span>SHERLOCK2</span></a>
+	<a href="layout3.html"><span>WATSON3</span></a>
+	<a href="https://www.bbc.co.uk/programmes/b018ttws/clips"><span>NEWS</span></a>
+	</nav>
+	</section>
+</div>
+<div id="wrap">
+	<div id="main_visual">
+		<header>
+		<div id="tabsJ" 손대지않기>
+		</div>
+		</header>
+		<div>
+			The name is Sherlock Holmes and the address is 221b Baker street.
+		</div>
+		<h2> THE GAME IS ON </h2>
+		<div>
+			I'm not a hero. I'm a high-functioning sociopath.
+		</div>
+		<div id="png_center">
+			<a href="#">
+			<img src="images/셜록버튼2.png">
+			</a>
+		</div>
+	</div>
+	<section id="and_section">
+	<h3> Sherlock and Watson </h3>
+	<hr/>
+	<p>
+		Co-created by Steven Moffat and Mark Gatiss,</br> Sherlock stars Benedict Cumberbatch as Sherlock Holmes and Martin Freeman as his loyal friend,</br>
+		Doctor John Watson. Rupert Graves plays Inspector Lestrade.
+	</p>
+	<hr/>
+</div>
+</div>
+<div class="container2">
+<div class="gallery">
+	<div class="gallery-item">
+		<div class="gallery-item-image">
+			<a href="https://namu.wiki/w/%EC%85%9C%EB%A1%9D(%EB%93%9C%EB%9D%BC%EB%A7%88)"><img class='small3' src="images/셜록3.jpg">
+		</div>
+		</a>
+		<div class="gallery-item-description">
+			<h3>sherlock</h3>
+			<span>여러분의 마음을 뒤흔들 </br> 고기능 소시오패스를 만나보세요!</span>
+		</div>
+	</div>
+	<div class="gallery-item">
+		<div class="gallery-item-image">
+			<a href="http://m.blog.naver.com/miwat/220294238422"><img class='small' src="images/셜록9.jpg">
+		</div>
+		</a>
+		<div class="gallery-item-description">
+			<h3>sherlock</h3>
+			<span>셜록이 누굴 닮았다구요? </br>예? 베네딕트 오이배치라뇨! </span>
+		</div>
+	</div>
+	<div class="gallery-item">
+		<div class="gallery-item-image">
+			<a href="#"><img class='small' src="images/셜록담배.jpg">
+		</div>
+		</a>
+		<div class="gallery-item-description">
+			<h3>sherlock</h3>
+			<span>한잔의 커피보다는 한개비의 담배를 </br>더 좋아하는듯 하군요</span>
+		</div>
+	</div>
+	<div class="gallery-item">
+		<div class="gallery-item-image">
+			<a href="https://www.bbc.co.uk/programmes/b018ttws/episodes"><img class='small' src="images/셜록5.jpg">
+		</div>
+		</a>
+		<div class="gallery-item-description">
+			<h3>sherlock</h3>
+			<span>셜록의 여러 에피소드들을 볼 수 있는 기회!</br> 셜령 놓치더라도 사실 상관없어요! </span>
+		</div>
+	</div>
+	<div class="gallery-item">
+		<div class="gallery-item-image">
+			<a href="https://www.bbc.co.uk/programmes/profiles/4fyrVz8DHHNJ55xYbwYtT0W/characters"><img class='small' src="images/셜록7.jpg">
+		</div>
+		</a>
+		<div class="gallery-item-description">
+			<h3>Watson</h3>
+			<span>셜록의 캐릭터들을 만나러 가볼까요? </br>부디 너무나 좋아하시길!</span>
+		</div>
+	</div>
+	<div class="gallery-item">
+		<div class="gallery-item-image">
+			<a href="https://www.bbc.co.uk/programmes/b018ttws"><img class='small2' src="images/셜록8.jpg">
+		</div>
+		</a>
+		<div class="gallery-item-description">
+			<h3>sherlock</h3>
+			<span>영어를 싫어한다구요?</br>그치만 셜록은 좋아하죠? 그럼 클릭!</span>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+<footer>
+<div>
+<div id="footer_left">
+	<ul id="n_list">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Services</a></li>
+		<li><a href="#"> Work </a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Contact us</a></li>
+		<div class="clear">
+		</div>
+	</ul>
+	<div>
+		 ⓒ 2019221005.moonsanha. i love sherlock.
+	</div>
+	<div>
+            Probably Maybe I made it because I am a fan of Sherlock./And so do you.
+	</div>
+</div>
+<ul id="i_list">
+	<li><a href="#"><img src="images/facebook.png"></li>
+	</a>
+	<li><a href="#"><img src="images/insta.png"></li>
+	</a>
+	<li><a href="#"><img src="images/Twitter.png"></li>
+	</a>
+</ul>
+<div class="clear">
+</div>
+</div>
+</footer>
+</ul>
+</div>
+</body>
 </html>
